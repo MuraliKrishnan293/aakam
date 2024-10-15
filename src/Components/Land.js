@@ -119,10 +119,10 @@ const Land = () => {
 
       <div className="secdiv container mt-5 p-5">
         <div className="row">
-          <div className="col-md-6 col-12">
-            <img style={{ width: "70%" }} src={potrait} alt="" />
+          <div className="col-md-6 d-flex justify-content-center col-12">
+            <img style={{ width: "100%" }} src={potrait} alt="" />
           </div>
-          <div className="col-md-6 col-12">
+          <div className="col-md-6 mt-5 col-12">
             <p
               style={{
                 fontFamily: "Poppins, Helvetica, Arial, Lucida, sans-serif",
