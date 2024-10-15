@@ -14,11 +14,11 @@ const About = () => {
   return (
     <div>
       <div style={{ width: "100%", paddingTop: "100px" }} class="fill w-100">
-        <h1 className="bg-succes w-100 p-5 text-white">
+        <h1 data-aos-duration="1000" className="bg-succes w-100 p-5 text-white">
           <center
             data-aos="zoom-in"
-            data-aos-once="true"
-            data-aos-duration="2000"
+            // data-aos-once="true"
+            data-aos-duration="1000"
           >
             <br />
             ABOUT US
@@ -34,11 +34,19 @@ const About = () => {
             {/* <img src={re1} /> */}
             <Tilt>
               <div style={{ height: "300px" }}>
-                <img style={{ height: "300px" }} src={abt1} alt="" />
+                <img
+                data-aos="zoom-in-right"
+                // data-aos-once="true"
+                data-aos-duration="1000"
+                style={{ height: "300px" }} src={abt1} alt="" />
               </div>
             </Tilt>
           </div>
-          <div className="col-md-6 col-12 sol-sm-6">
+          <div
+          data-aos="zoom-in-left"
+          // data-aos-once="true"
+          data-aos-duration="1500"
+          className="col-md-6 col-12 sol-sm-6">
             <h4
               style={{
                 fontFamily: "Poppins, Helvetica, Arial, Lucida, sans-serif",
@@ -100,6 +108,9 @@ const About = () => {
         <div className="row justify-content-center w-100">
           <div className="col-md-6 d-flex justify-content-center col-sm-12 col-12">
             <div
+            data-aos="fade-up"
+            // data-aos-once="true"
+            data-aos-duration="1000"
               style={{
                 width: "300px",
                 minHeight: "300px",
@@ -125,6 +136,10 @@ const About = () => {
           </div>
           <div className="col-md-6 d-flex justify-content-center col-sm-12 col-12">
             <div
+            data-aos="fade-up"
+            // data-aos-once="true"
+            data-aos-duration="1000"
+            data-aos-delay="500"
               style={{
                 width: "300px",
                 minHeight: "300px",
@@ -151,9 +166,13 @@ const About = () => {
         </div>
       </div>
 
-      <div className="svgpattern container-fluid w-100 p-5">
+      <div style={{overflow: "hidden"}} className="svgpattern container-fluid w-100 p-5">
         <div className="row d-flex rot">
-          <div className="col-md-6 text-center justify-content-center col-sm-12 col-12">
+          <div
+          data-aos="fade-right"
+          // data-aos-once="true"
+          data-aos-duration="1000"
+          className="col-md-6 text-center justify-content-center col-sm-12 col-12">
             <h4
               style={{
                 fontFamily: "Poppins, Helvetica, Arial, Lucida, sans-serif",
@@ -238,6 +257,9 @@ const About = () => {
           </div>
 
           <div
+          data-aos="fade-left"
+          // data-aos-once="true"
+          data-aos-duration="1000"
             style={{ backgroundColor: "", borderRadius: "10px" }}
             className="col-md-6 col-sm-6 col-12 text-center d-flex justify-content-center"
           >

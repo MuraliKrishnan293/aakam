@@ -29,7 +29,10 @@ export const ContactUs = () => {
         <p>
         Our Customer Support Team will Contact You Shortly!
         </p>
-      <form ref={form} onSubmit={sendEmail} className="contact-form">
+      <form
+      data-aos="zoom-in"
+      data-aos-duration="1000"
+      ref={form} onSubmit={sendEmail} className="contact-form">
         <label>Name</label>
         <input type="text" name="from_name" required />
         

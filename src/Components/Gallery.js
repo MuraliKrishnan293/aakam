@@ -43,7 +43,11 @@ export default function Gallery() {
   return (<>
     <div className="container gap-3 d-flex flex-column justify-content-center align-items-center text-black text-center py-5">
       <div className="row mb-5">
-        <div className="col-md-8 gal mt-5 text-center mx-auto">
+        <div
+        data-aos="zoom-in"
+        // data-aos-once="true"
+        data-aos-duration="1000"
+        className="col-md-8 gal mt-5 text-center mx-auto">
           <h1 className="mb-4">Our Services</h1>
           <p className="lead">
             We offer a range of high-quality services to help satisfy your Ideas
@@ -53,6 +57,7 @@ export default function Gallery() {
       </div>
 
       <div
+      style={{overflow: "hidden"}}
         variants={variantsall}
         initial="initial"
         whileInView="animate"
@@ -62,6 +67,13 @@ export default function Gallery() {
         <div className="col-md-6 order-md-2">
           <div className="text-center mb-4">
             <img
+            // data-aos="fade-right"
+            // // data-aos-once="true"
+            // data-aos-duration="1000"
+            data-aos="fade-up"
+            data-aos-delay="1000"
+            data-aos-duration="1000"
+            data-aos-anchor-placement="top-bottom"
               style={{ width: "400px", height: "400px" }}
               src={i1}
               className="img-fluid btn rounded shadow-lg"
@@ -120,6 +132,10 @@ export default function Gallery() {
           </div>
         </div>
         <div
+        data-aos="fade-up"
+        data-aos-anchor-placement="center-bottom"
+        data-aos-delay="1000"
+        data-aos-duration="1000"
           variants={variantsall}
           initial="initial"
           whileInView="animate"
@@ -146,6 +162,7 @@ export default function Gallery() {
       </div>
 
       <div
+      style={{overflow: "hidden"}}
         variants={variantsall}
         initial="initial"
         whileInView="animate"
@@ -155,6 +172,10 @@ export default function Gallery() {
         <div className="col-md-6">
           <div className="text-center mb-4">
             <img
+            data-aos="fade-up"
+            data-aos-anchor-placement="bottom-bottom"
+            // data-aos-delay="1000"
+            data-aos-duration="1000"
               src={i2}
               className="img-fluid btn rounded shadow-lg"
               alt="UI/UX Design"
@@ -207,7 +228,12 @@ export default function Gallery() {
 
           </div>
         </div>
-        <div className="col-md-6 text-black">
+        <div
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-center"
+        // data-aos-delay="1000"
+        data-aos-duration="1000"
+        className="col-md-6 text-black">
           <h2 className="mb-3">Office Interiors</h2>
           <p className="">
             Elevate your workspace with our comprehensive office interior design
@@ -227,6 +253,7 @@ export default function Gallery() {
       </div>
 
       <div
+      style={{overflow: "hidden"}}
         variants={variantsall}
         initial="initial"
         whileInView="animate"
@@ -236,6 +263,10 @@ export default function Gallery() {
         <div className="col-md-6 order-md-2">
           <div className="text-center mb-4">
             <img
+            // data-aos="fade-up"
+            data-aos="fade-right"
+            // data-aos-delay="1000"
+            data-aos-duration="1000"
               style={{ width: "400px", height: "400px" }}
               src={i1}
               className="img-fluid btn rounded shadow-lg"
@@ -294,6 +325,10 @@ export default function Gallery() {
           </div>
         </div>
         <div
+        // data-aos="fade-up"
+        data-aos="zoom-in"
+        // data-aos-delay="1000"
+        data-aos-duration="1000"
           variants={variantsall}
           initial="initial"
           whileInView="animate"
@@ -320,6 +355,7 @@ export default function Gallery() {
       </div>
 
       <div
+      style={{overflow: "hidden"}}
         variants={variantsall}
         initial="initial"
         whileInView="animate"
@@ -329,6 +365,8 @@ export default function Gallery() {
         <div className="col-md-6">
           <div className="text-center mb-4">
             <img
+            data-aos="fade-right"
+            data-aos-duration="1000"
               src={i2}
               className="img-fluid btn rounded shadow-lg"
               alt="UI/UX Design"
@@ -381,9 +419,12 @@ export default function Gallery() {
 
           </div>
         </div>
-        <div className="col-md-6 text-black">
+        <div
+        data-aos="fade-left"
+            data-aos-duration="1000"
+        className="col-md-6 text-black">
           <h2 className="mb-3">Office Interiors</h2>
-          <p className="">
+          <p className="text-black">
             Elevate your workspace with our comprehensive office interior design
             services. We specialize in creating environments that are not only
             visually appealing but also foster productivity and collaboration.

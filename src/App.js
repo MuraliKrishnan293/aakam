@@ -7,11 +7,14 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import About from "./Components/About";
 import { ContactUs } from "./Components/Contact";
 import Gallery from "./Components/Gallery";
+import AOS from 'aos';
+import 'aos/dist/aos.css'
 
 function App() {
   const [load, setLoad] = useState(false);
 
   useEffect(() => {
+    AOS.init();
     setLoad(true);
     setTimeout(() => {
       setLoad(false);
