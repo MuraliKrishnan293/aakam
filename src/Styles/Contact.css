@@ -1,0 +1,52 @@
+.contact-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  .contact-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-family: 'Open Sans', Arial, sans-serif;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Open Sans', Arial, sans-serif;
+  }
+  
+  .contact-form input[type="submit"] {
+    background-color: #1e4451;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-form input[type="submit"]:hover {
+    background-color: #16353a;
+  }
+
+.contact-us{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: repeat;
+    background-image: url("data:image/svg+xml;utf8,%3Csvg height=%22auto%22 viewBox=%220 0 1920 1080%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath d=%22M0 242.094c128 100.53 384 480.451 640 502.651 256 22.2 384-302.537 640-391.651 256-89.115 512-43.137 640-53.922V1080H0Z%22 fill=%22%23365ac2%22%2F%3E%3Cpath d=%22M0 242.094c128 100.53 384 480.451 640 502.651 256 22.2 384-302.537 640-391.651 256-89.115 512-43.137 640-53.922%22 fill=%22none%22%2F%3E%3C%2Fsvg%3E");
+}

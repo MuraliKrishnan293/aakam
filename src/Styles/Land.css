@@ -1,0 +1,71 @@
+.lands{
+    background-image: url('../Images/modern-styled-entryway.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.h2text{
+    font-size: 2.5rem;
+    background-color: rgba(173, 210, 50, 0.115);
+    font-weight: 1000;
+}
+
+.ptextland{
+    font-size: 1.5rem;
+    font-weight: 500;
+    width: 70%;
+}
+
+.book{
+    background-color: #ffdd94;
+}
+
+.book:hover{
+    background-color: #ffdd94a2;
+}
+
+.book2{
+    background-color: #1e4451;
+    color: white;
+}
+
+.thirddiv{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('../Images//wave.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.hovimg{
+    transform: scale(1,1);
+    transition: all 0.6s;
+}
+
+.hovimg:hover{
+    transform: scale(1.01,1.01);
+}
+
+.cardserv{
+background: rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.rev{
+    background-image: url('../Images/wave\ \(2\).svg');
+    background-repeat: no-repeat;
+}
+
+.revi{
+    position: relative;
+    z-index: 999;
+}

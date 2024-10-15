@@ -1,23 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import Nav from "./Components/Nav";
+import { useEffect, useState } from "react";
+import Land from "./Components/Land";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import About from "./Components/About";
+import { ContactUs } from "./Components/Contact";
+import Gallery from "./Components/Gallery";
 
 function App() {
+  const [load, setLoad] = useState(false);
+
+  useEffect(() => {
+    setLoad(true);
+    setTimeout(() => {
+      setLoad(false);
+    }, 3000);
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {load ? (
+        <div className="loading-screen">
+          <div className="spinner"></div>
+        </div>
+      ) : (
+        <>
+        <Nav />
+        <BrowserRouter>
+          <Routes>
+            <Route path='/' element={<Land />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/contact' element={<ContactUs />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="*" element={<h1>404 - Not Found</h1>} />
+          </Routes>
+        </BrowserRouter>
+        {/* <Land /> */}
+      </>
+      )}
     </div>
   );
 }

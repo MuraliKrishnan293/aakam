@@ -1,0 +1,39 @@
+
+.navbar {
+    background-color: #ddddddb7;
+    transition: background-color 0.5s ease;
+    color: black;
+    position: relative;
+    z-index: 1000;
+  }
+  
+  
+  .navbar.scrolled {
+    background-color: #ffffff;
+  }
+  
+  .nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px; 
+    background-color: #ffdd94;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: center;
+  }
+  
+  .nav-link:hover {
+    color: #ffdd94;
+  }
+  
+  .nav-link:hover::after {
+    transform: scaleX(1);
+  }
