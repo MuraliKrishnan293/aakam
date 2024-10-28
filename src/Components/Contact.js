@@ -27,8 +27,8 @@ export const ContactUs = () => {
         Fill Out The Form Below!
         </h4>
         <p>
-        Our Customer Support Team will Contact You Shortly!
-        </p>
+         Our Customer Support Team will Contact You Shortly!
+         </p>
       <form
       data-aos="zoom-in"
       data-aos-duration="1000"
