@@ -8,7 +8,9 @@ import About from "./Components/About";
 import { ContactUs } from "./Components/Contact";
 import Gallery from "./Components/Gallery";
 import AOS from 'aos';
-import 'aos/dist/aos.css'
+import 'aos/dist/aos.css';
+import ReactWhatsapp from 'react-whatsapp';
+import { FaWhatsapp } from 'react-icons/fa';
 
 function App() {
   const [load, setLoad] = useState(false);
@@ -39,6 +41,13 @@ function App() {
             <Route path="*" element={<h1>404 - Not Found</h1>} />
           </Routes>
         </BrowserRouter>
+        
+        {/* <ReactWhatsapp number="9884624057" message="Hello World!!!" /> */}
+        <a href={`https://wa.me/918056491710?text=Hello%20World!!!`} target="_blank" rel="noopener noreferrer">
+            <div className="whatsapp-button">
+              <FaWhatsapp className="whatsapp-icon" />
+            </div>
+          </a>
         {/* <Land /> */}
       </>
       )}

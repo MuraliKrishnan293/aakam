@@ -1,6 +1,7 @@
 import React from "react";
 import SimpleImageSlider from "react-simple-image-slider";
 import '../Styles/Gallery.css';
+import logo from '../Images/logo.png';
 // import { motion } from "framer-motion";
 // import sw from "../Images/4458680.jpg";
 // import ui from "../Images/5757453.jpg";
@@ -41,7 +42,7 @@ export default function Gallery() {
   const office = [o1,o2,o3,o4,o5];
 
   return (<>
-    <div className="container gap-3 d-flex flex-column justify-content-center align-items-center text-black text-center py-5">
+    <div style={{overflowX: "hidden"}} className="container gap-3 d-flex flex-column justify-content-center align-items-center text-black text-center py-5">
       <div className="row mb-5">
         <div
         data-aos="zoom-in"
@@ -444,67 +445,85 @@ export default function Gallery() {
       
     </div>
     <div className="foot">
-      <footer style={{background: "#1e4451"}} class="foot">
-        <div style={{background: "#1e4451", color: "white"}} class="container">
-          <div class="row footer-con">
-            <div 
-            data-aos="zoom-in"
-            data-aos-once="true"
-
-            class="col-md-6 col-sm-12 col-12 d-flex justify-content-md-center align-items-md-center text-md-center text-start flex-column">
-              <h2 class="footer-logo fw-5 fs-1">AAKAM</h2>
-              {/* <img
+        <footer style={{ background: "#1e4451" }} class="foot">
+          <div
+            style={{ background: "#1e4451", color: "white" }}
+            class="container"
+          >
+            <div class="row footer-con">
+              <div
+                // data-aos="zoom-in"
+                // data-aos-once="true"
+                class="col-md-6 col-sm-12 col-12 d-flex justify-content-md-center align-items-md-center text-md-center text-start flex-column"
+              >
+                <h2 class="footer-logo fw-5 fs-1">AAKAM</h2>
+                <img
                 src={logo}
                 alt="Logo"
-                class="footer-logo-img"
-              /> */}
+                className="footer-logo-img"
+                style={{borderRadius: "1000%"}}
+              />
+              </div>
+              {/* <div className="hr"><hr /></div> */}
+              <div
+                // data-aos="zoom-in"
+                // data-aos-once="true"
+                class="col-md-6 col-sm-12 col-12 d-flex justify-content-md-center align-items-md-center text-md-center text-start flex-column"
+              >
+                <h4 className="text-center">Our Services</h4>
+                <ul
+                  class="footer-services text-center"
+                  style={{ listStyleType: "none" }}
+                >
+                  <li className="mt-3">UPVC Windows</li>
+                  <li className="mt-3">Bedroom Interior</li>
+                  <li className="mt-3">Livingroom Interior</li>
+                  <li className="mt-3">Modular Kitchen</li>
+                  <li className="mt-3">Office Interior</li>
+                </ul>
+              </div>
             </div>
-            {/* <div className="hr"><hr /></div> */}
-            <div
-            
-            data-aos="zoom-in"
-            data-aos-once="true"
-
-            class="col-md-6 col-sm-12 col-12 d-flex justify-content-md-center align-items-md-center text-md-center text-start flex-column">
-              <h4 className="text-center">Our Services</h4>
-              <ul class="footer-services text-center" style={{listStyleType: "none"}}>
-                <li className="mt-3">UPVC Windows</li>
-                <li className="mt-3">Bedroom Interior</li>
-                <li className="mt-3">Livingroom Interior</li>
-                <li className="mt-3">Modular Kitchen</li>
-                <li className="mt-3">Office Interior</li>
-              </ul>
-            </div>
-          </div><hr />
-          <div className="row">
-          <h2 style={{width: "100%"}} className="w-100 text-md-center text-start fw-5 fs-1">Contact us</h2>
-          <div
-          
-
-          data-aos="zoom-in"
-          data-aos-once="true"
-
-          class="col-md-12 mt-3 col-sm-12 col-12 d-flex justify-content-md-center align-items-md-center text-md-center text-start flex-column">
-{/*               
+            <hr />
+            <div className="row">
+              <h2
+                style={{ width: "100%" }}
+                className="w-100 text-md-center text-start fw-5 fs-1"
+              >
+                Contact us
+              </h2>
+              <div
+                // data-aos="zoom-in"
+                // data-aos-once="true"
+                class="col-md-6 mt-3 col-sm-12 col-12 d-flex text-md-center justify-content-md-center align-items-md-center text-start justify-content-start align-items-start flex-column"
+              >
+                {/* no 4, Selai Rd, Indira Gandhi Nagar,
+                Ma. Po. Si. Nagar, Tiruvallur,
+                Kakkalur, Tamil Nadu 602001
+                +91 8056491710
+                aakamdesignstudio96@gmail.com */}
+                {/*               
               <div class="contact-details"> */}
                 {/* <div className="col-md-6 col-12"> */}
-                  <p>
-                  <i class="fa fa-instagram"></i> _mo.nish_ 9
+                <p>
+                  No 4, Selai Rd, Indira Gandhi Nagar,<br />
+                Ma. Po. Si. Nagar, Tiruvallur,<br />
+                Kakkalur, Tamil Nadu 602001
+                </p>
+              </div>
+              <div className="col-md-6 mt-3 col-sm-12 col-12 d-flex text-md-center justify-content-md-center align-items-md-center text-start justify-content-start align-items-start flex-column">
+              <p>
+                  <i class="fa"></i>Aakam Interior Design Studio
                 </p>
                 <p>
-                  <i class="fa fa-envelope"></i> ThulasiRaam@gmail.com
+                  <i class="fa fa-email"></i>aakamdesignstudio96@gmail.com
                 </p>
                 <p>
-                  <i class="fa fa-map-marker"></i> 18, Venkatesa St,
-                  Pallikaranai, Chennai, Tamil Nadu
+                  <i class="fa fa-phone"></i>+91 8056491710
                 </p>
-                <p>
-                  <i class="fa fa-phone"></i> +91-7052-101-786
-                </p>
-                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </footer>
+        </footer>
       </div>
     </>
   );

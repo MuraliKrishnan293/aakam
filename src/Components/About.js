@@ -9,10 +9,11 @@ import "@lottiefiles/lottie-player";
 import Lottie from "lottie-react";
 import jsons from "../Images/Animation - 1728965751053.json";
 import Marquee from "react-fast-marquee";
+import logo from '../Images/logo.png';
 
 const About = () => {
   return (
-    <div>
+    <div style={{overflowX: "hidden"}}>
       <div style={{ width: "100%", paddingTop: "100px" }} class="fill w-100">
         <h1 data-aos-duration="1000" className="bg-succes w-100 p-5 text-white">
           <center
@@ -274,95 +275,105 @@ const About = () => {
         <div className="mt-5">
           <Marquee className="mt-5">
             <h4>
-              Call us at: +91 1234567890
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              Mail at: www.g@gmail.com
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              Call us at: +91 8056491710
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              Mail at: aakamdesignstudio96@gmail.com
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </h4>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <h4>
-              Call us at: +91 1234567890
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              Mail at: www.g@gmail.com
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              Call us at: +91 8056491710
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              Mail at: aakamdesignstudio96@gmail.com
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </h4>
           </Marquee>
         </div>
       </div>
 
       <>
-        <div className="foot">
-          <footer style={{ background: "#1e4451" }} class="foot">
-            <div
-              style={{ background: "#1e4451", color: "white" }}
-              class="container"
-            >
-              <div class="row footer-con">
-                <div
-                  data-aos="zoom-in"
-                  data-aos-once="true"
-                  class="col-md-6 col-sm-12 col-12 d-flex justify-content-md-center align-items-md-center text-md-center text-start flex-column"
-                >
-                  <h2 class="footer-logo fw-5 fs-1">AAKAM</h2>
-                  {/* <img
+      <div className="foot">
+        <footer style={{ background: "#1e4451" }} class="foot">
+          <div
+            style={{ background: "#1e4451", color: "white" }}
+            class="container"
+          >
+            <div class="row footer-con">
+              <div
+                data-aos="fade-left"
+            data-aos-duration="1000"
+                data-aos-once="true"
+                class="col-md-6 col-sm-12 col-12 d-flex justify-content-md-center align-items-md-center text-md-center text-start flex-column"
+              >
+                <h2 class="footer-logo fw-5 fs-1">AAKAM</h2>
+                <img
                 src={logo}
                 alt="Logo"
-                class="footer-logo-img"
-              /> */}
-                </div>
-                {/* <div className="hr"><hr /></div> */}
-                <div
-                  data-aos="zoom-in"
-                  data-aos-once="true"
-                  class="col-md-6 col-sm-12 col-12 d-flex justify-content-md-center align-items-md-center text-md-center text-start flex-column"
-                >
-                  <h4 className="text-center">Our Services</h4>
-                  <ul
-                    class="footer-services text-center"
-                    style={{ listStyleType: "none" }}
-                  >
-                    <li className="mt-3">UPVC Windows</li>
-                    <li className="mt-3">Bedroom Interior</li>
-                    <li className="mt-3">Livingroom Interior</li>
-                    <li className="mt-3">Modular Kitchen</li>
-                    <li className="mt-3">Office Interior</li>
-                  </ul>
-                </div>
+                className="footer-logo-img"
+                style={{borderRadius: "1000%"}}
+              />
               </div>
-              <hr />
-              <div className="row">
-                <h2
-                  style={{ width: "100%" }}
-                  className="w-100 text-md-center text-start fw-5 fs-1"
+              {/* <div className="hr"><hr /></div> */}
+              <div
+                data-aos="fade-left"
+            data-aos-duration="1000"
+                data-aos-once="true"
+                class="col-md-6 col-sm-12 col-12 d-flex justify-content-md-center align-items-md-center text-md-center text-start flex-column"
+              >
+                <h4 className="text-center">Our Services</h4>
+                <ul
+                  class="footer-services text-center"
+                  style={{ listStyleType: "none" }}
                 >
-                  Contact us
-                </h2>
-                <div
-                  data-aos="zoom-in"
-                  data-aos-once="true"
-                  class="col-md-12 mt-3 col-sm-12 col-12 d-flex justify-content-md-center align-items-md-center text-md-center text-start flex-column"
-                >
-                  {/*               
-              <div class="contact-details"> */}
-                  {/* <div className="col-md-6 col-12"> */}
-                  <p>
-                    <i class="fa fa-instagram"></i> _mo.nish_ 9
-                  </p>
-                  <p>
-                    <i class="fa fa-envelope"></i> ThulasiRaam@gmail.com
-                  </p>
-                  <p>
-                    <i class="fa fa-map-marker"></i> 18, Venkatesa St,
-                    Pallikaranai, Chennai, Tamil Nadu
-                  </p>
-                  <p>
-                    <i class="fa fa-phone"></i> +91-7052-101-786
-                  </p>
-                </div>
+                  <li className="mt-3">UPVC Windows</li>
+                  <li className="mt-3">Bedroom Interior</li>
+                  <li className="mt-3">Livingroom Interior</li>
+                  <li className="mt-3">Modular Kitchen</li>
+                  <li className="mt-3">Office Interior</li>
+                </ul>
               </div>
             </div>
-          </footer>
-        </div>
+            <hr />
+            <div className="row">
+              <h2
+                style={{ width: "100%" }}
+                className="w-100 text-md-center text-start fw-5 fs-1"
+              >
+                Contact us
+              </h2>
+              <div
+                // data-aos="zoom-in"
+                // data-aos-once="true"
+                class="col-md-6 mt-3 col-sm-12 col-12 d-flex text-md-center justify-content-md-center align-items-md-center text-start justify-content-start align-items-start flex-column"
+              >
+                {/* no 4, Selai Rd, Indira Gandhi Nagar,
+                Ma. Po. Si. Nagar, Tiruvallur,
+                Kakkalur, Tamil Nadu 602001
+                +91 8056491710
+                aakamdesignstudio96@gmail.com */}
+                {/*               
+              <div class="contact-details"> */}
+                {/* <div className="col-md-6 col-12"> */}
+                <p>No 4, Selai Rd, Indira Gandhi Nagar,<br />
+                Ma. Po. Si. Nagar, Tiruvallur,<br />
+                Kakkalur, Tamil Nadu 602001
+                </p>
+              </div>
+              <div className="col-md-6 mt-3 col-sm-12 col-12 d-flex text-md-center justify-content-md-center align-items-md-center text-start justify-content-start align-items-start flex-column">
+              <p>
+                  <i class="fa"></i>Aakam Interior Design Studio
+                </p>
+                <p>
+                  <i class="fa fa-email"></i>aakamdesignstudio96@gmail.com
+                </p>
+                <p>
+                  <i class="fa fa-phone"></i>+91 8056491710
+                </p>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
       </>
     </div>
   );
