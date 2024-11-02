@@ -264,8 +264,8 @@ const Land = () => {
                 Contact us
               </h2>
               <div
-                data-aos="zoom-in"
-                data-aos-once="true"
+                // data-aos="zoom-in"
+                // data-aos-once="true"
                 class="col-md-6 mt-3 col-sm-12 col-12 d-flex text-md-center justify-content-md-center align-items-md-center text-start justify-content-start align-items-start flex-column"
               >
                 {/* no 4, Selai Rd, Indira Gandhi Nagar,
