@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import "../Styles/Contact.css";
 import { ToastContainer, toast, Bounce } from "react-toastify";
@@ -6,27 +6,99 @@ import "react-toastify/dist/ReactToastify.css";
 import { Tilt } from 'react-tilt';
 import g from '../Images/globe-removebg-preview.png';
 import logo from '../Images/logo.png';
+import axios from "axios";
 
 export const ContactUs = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [address, setAddress] = useState('');
+  const [message, setMessage] = useState('');
+  const [load, setLoad] = useState(false);
   const form = useRef();
 
-  const sendEmail = (e) => {
+  // const sendEmail = (e) => {
+  //   e.preventDefault();
+  //   emailjs
+  //     .sendForm(
+  //       "service_dftnmra",
+  //       "template_wngc4wx",
+  //       form.current,
+  //       "wcuxHDR-dxognOTs_"
+  //     )
+  //     .then(
+  //       () => {
+  //         toast.success("Will Contact you Back Shortly!");
+  //       },
+  //       (error) => {
+  //         toast.error("Failed to send email. Please try again.");
+  //       }
+  //     );
+  // };
+
+  const validateForm = () => {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phonePattern = /^[0-9]{10,}$/;
+
+    if (name.trim().length < 3) {
+      toast.error("Name should be at least 3 characters long.");
+      return false;
+    }
+
+    if (!emailPattern.test(email)) {
+      toast.error("Please enter a valid email address.");
+      return false;
+    }
+
+    if (!phonePattern.test(phone)) {
+      toast.error("Phone number should be at least 10 digits long and contain only numbers.");
+      return false;
+    }
+
+    if (address.trim().length < 5) {
+      toast.error("Address should be at least 5 characters long.");
+      return false;
+    }
+
+    if (message.trim().length < 10) {
+      toast.error("Message should be at least 10 characters long.");
+      return false;
+    }
+
+    return true;
+  };
+
+  const sendAppointment = async (e) => {
     e.preventDefault();
-    emailjs
-      .sendForm(
-        "service_dftnmra",
-        "template_wngc4wx",
-        form.current,
-        "wcuxHDR-dxognOTs_"
-      )
-      .then(
-        () => {
-          toast.success("Will Contact you Back Shortly!");
-        },
-        (error) => {
-          toast.error("Failed to send email. Please try again.");
-        }
-      );
+
+    if (!validateForm()) return;
+    setLoad(true);
+
+    try {
+      const response = await axios.post("http://localhost:5000/app/appointments", {
+        name,
+        email,
+        phoneNumber: phone,
+        address,
+        message,
+      });
+
+      if (response.status === 200) {
+        toast.success("Appointment created successfully!");
+        setName('');
+        setEmail('');
+        setPhone('');
+        setAddress('');
+        setMessage('');
+      } else {
+        toast.error("Failed to create appointment. Please try again.");
+      }
+      setLoad(false);
+    } catch (error) {
+      setLoad(false);
+      console.error("Error:", error);
+      toast.error("Error creating appointment. Please try again.");
+    }
   };
 
   const defaultOptions = {
@@ -41,6 +113,8 @@ export const ContactUs = () => {
     easing:         "cubic-bezier(.03,.98,.52,.99)",    // Easing on enter/exit.
   }
 
+
+
   return (
     <>
       <div
@@ -49,29 +123,24 @@ export const ContactUs = () => {
       >
         <h4>Fill Out The Form Below!</h4>
         <p>Our Customer Support Team will Contact You Shortly!</p>
-        <form
-          data-aos="zoom-in"
-          data-aos-duration="1000"
-          ref={form}
-          onSubmit={sendEmail}
-          className="contact-form"
-        >
+        <form data-aos="zoom-in" data-aos-duration="1000" className="contact-form">
           <label>Name</label>
-          <input type="text" name="from_name" required />
+          <input type="text" value={name} onChange={(e) => setName(e.target.value)} required />
 
           <label>Email</label>
-          <input type="email" name="from_email" required />
+          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
 
           <label>Phone Number</label>
-          <input type="tel" name="phone" required />
+          <input type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} required />
 
           <label>Address</label>
-          <input type="text" name="address" required />
+          <input type="text" value={address} onChange={(e) => setAddress(e.target.value)} required />
 
           <label>Message</label>
-          <textarea name="message" required />
+          <textarea value={message} onChange={(e) => setMessage(e.target.value)} required />
 
-          <input type="submit" value="Send" />
+          {/* <input type="submit"  /> */}
+          <button type="submit" className="btn btn-primary" onClick={sendAppointment} disabled={load}>{load ? "Submitting" : "Submit"}</button>
         </form>
         <ToastContainer
           position="top-right"

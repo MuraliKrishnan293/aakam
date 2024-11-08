@@ -11,6 +11,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import ReactWhatsapp from 'react-whatsapp';
 import { FaWhatsapp } from 'react-icons/fa';
+import Admin from './Components/Admin';
+import AdminPanel from './Components/AdminPanel';
 
 function App() {
   const [load, setLoad] = useState(false);
@@ -38,7 +40,9 @@ function App() {
             <Route path='/about' element={<About />} />
             <Route path='/contact' element={<ContactUs />} />
             <Route path="/gallery" element={<Gallery />} />
-            <Route path="*" element={<h1>404 - Not Found</h1>} />
+            <Route path="/admin" element={<Admin />} />
+            <Route path="/admin-panel" element={<AdminPanel />} />
+            <Route path="*" element={<h1 style={{marginTop: "200px"}}>404 - Not Found</h1>} />
           </Routes>
         </BrowserRouter>
         
