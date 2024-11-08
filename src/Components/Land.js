@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "../Styles/Land.css";
 import style from "./../../node_modules/dom-helpers/esm/css";
-import potrait from "../Images/portrait.jpeg";
+import potrait from "../Images/image.png";
 import i1 from "../Images/image8.jpeg";
 import i2 from "../Images/bed.jpeg";
 import i3 from "../Images/living.jpg";
@@ -125,7 +125,7 @@ const Land = () => {
       <div style={{overflow: "hidden"}} className="secdiv container mt-5 p-5">
         <div className="row">
           <div className="col-md-6 d-flex justify-content-center col-12">
-            <img data-aos="fade-right" data-aos-duration="1500" style={{ width: "100%" }} src={potrait} alt="" />
+            <a href='/contact'><img data-aos="fade-right" data-aos-duration="1500" style={{ width: "100%" }} src={potrait} alt="" /></a>
           </div>
           <div
           data-aos="fade-left" data-aos-duration="1500"
