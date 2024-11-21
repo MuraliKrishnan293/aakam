@@ -34,6 +34,7 @@ const Admin = () => {
     setLoading(false);
     console.log(req.data);
     nav("/admin-panel");
+    toast.success("Login Success");
     if(req.status===200){
       localStorage.setItem("email", email);
       localStorage.setItem("token", req.data.authToken);
