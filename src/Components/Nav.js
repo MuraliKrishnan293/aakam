@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useNavigate } from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import '../Styles/Nav.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
