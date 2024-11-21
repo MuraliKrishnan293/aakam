@@ -75,7 +75,7 @@ export const ContactUs = () => {
     setLoad(true);
 
     try {
-      const response = await axios.post("http://localhost:5000/app/appointments", {
+      const response = await axios.post("https://aakaminterior12.onrender.com/app/appointments", {
         name,
         email,
         phoneNumber: phone,

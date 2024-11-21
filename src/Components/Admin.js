@@ -14,7 +14,7 @@ const Admin = () => {
     e.preventDefault();
     setLoading(true);
 
-    try{const req = await axios.post("http://localhost:5000/app/login",{
+    try{const req = await axios.post("https://aakaminterior12.onrender.com/app/login",{
       email, password
       
     });

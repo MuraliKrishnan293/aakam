@@ -29,7 +29,7 @@ const AdminPanel = () => {
 
 
     const resp = async()=>{
-        const response = await axios.get('http://localhost:5000/app/reviews',{
+        const response = await axios.get('https://aakaminterior12.onrender.com/app/reviews',{
             headers: {
                 'Authorization': `Bearer ${auth}`,
             },
@@ -41,7 +41,7 @@ const AdminPanel = () => {
 
 
     const res = async()=>{
-        const response = await axios.get('http://localhost:5000/app/all-appointments',{
+        const response = await axios.get('https://aakaminterior12.onrender.com/app/all-appointments',{
             headers: {
                 'Authorization': `Bearer ${auth}`,
             },
