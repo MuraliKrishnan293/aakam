@@ -21,7 +21,7 @@ import r8 from '../Images/re8.jpg';
 import r9 from '../Images/re9.jpg';
 import Marquee from "react-fast-marquee";
 import { useNavigate } from "react-router-dom";
-import logo from '../Images/logo.png';
+import logo from '../Images/LogoFinal.png';
 
 const Land = () => {
 
@@ -125,7 +125,7 @@ const Land = () => {
       <div style={{overflow: "hidden"}} className="secdiv container mt-5 p-5">
         <div className="row">
           <div className="col-md-6 d-flex justify-content-center col-12">
-            <a href='/contact'><img data-aos="fade-right" data-aos-duration="1500" style={{ width: "100%" }} src={potrait} alt="" /></a>
+            <a href='/gallery'><img data-aos="fade-right" data-aos-duration="1500" style={{ width: "100%" }} src={potrait} alt="" /></a>
           </div>
           <div
           data-aos="fade-left" data-aos-duration="1500"
@@ -227,12 +227,12 @@ const Land = () => {
                 data-aos-once="true"
                 class="col-md-6 col-sm-12 col-12 d-flex justify-content-md-center align-items-md-center text-md-center text-start flex-column"
               >
-                <h2 class="footer-logo fw-5 fs-1">AAKAM</h2>
+                {/* <h2 class="footer-logo fw-5 fs-1">AAKAM</h2> */}
                 <img
                 src={logo}
                 alt="Logo"
                 className="footer-logo-img"
-                style={{borderRadius: "1000%"}}
+                style={{width: "200px", height: "200px", borderRadius: "1000%"}}
               />
               </div>
               {/* <div className="hr"><hr /></div> */}
@@ -242,16 +242,16 @@ const Land = () => {
                 data-aos-once="true"
                 class="col-md-6 col-sm-12 col-12 d-flex justify-content-md-center align-items-md-center text-md-center text-start flex-column"
               >
-                <h4 className="text-center">Our Services</h4>
+                <h4 className="">Our Services</h4>
                 <ul
-                  class="footer-services text-center"
+                  class="footer-services"
                   style={{ listStyleType: "none" }}
                 >
-                  <li className="mt-3">UPVC Windows</li>
-                  <li className="mt-3">Bedroom Interior</li>
-                  <li className="mt-3">Livingroom Interior</li>
-                  <li className="mt-3">Modular Kitchen</li>
-                  <li className="mt-3">Office Interior</li>
+                  <p className="mt-3">UPVC Windows</p>
+                  <p className="mt-3">Bedroom Interior</p>
+                  <p className="mt-3">Livingroom Interior</p>
+                  <p className="mt-3">Modular Kitchen</p>
+                  <p className="mt-3">Office Interior</p>
                 </ul>
               </div>
             </div>

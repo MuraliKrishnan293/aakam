@@ -5,7 +5,7 @@ import { ToastContainer, toast, Bounce } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Tilt } from 'react-tilt';
 import g from '../Images/globe-removebg-preview.png';
-import logo from '../Images/logo.png';
+import logo from '../Images/LogoFinal.png';
 import axios from "axios";
 
 export const ContactUs = () => {
@@ -198,12 +198,12 @@ export const ContactUs = () => {
                 data-aos-once="true"
                 class="col-md-6 col-sm-12 col-12 d-flex justify-content-md-center align-items-md-center text-md-center text-start flex-column"
               >
-                <h2 class="footer-logo fw-5 fs-1">AAKAM</h2>
+                {/* <h2 class="footer-logo fw-5 fs-1">AAKAM</h2> */}
                 <img
                 src={logo}
                 alt="Logo"
                 className="footer-logo-img"
-                style={{borderRadius: "1000%"}}
+                style={{width: "200px", height: "200px", borderRadius: "1000%"}}
               />
               </div>
               {/* <div className="hr"><hr /></div> */}

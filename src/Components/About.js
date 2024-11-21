@@ -2,14 +2,14 @@ import React from "react";
 import "../Styles/About.css";
 import abt1 from "../Images/about1-removebg-preview.png";
 import Tilt from "react-parallax-tilt";
-import mission from "../Images/mission.png";
-import vision from "../Images/vis.png";
+import mission from "../Images/portrait.jpeg";
+import vision from "../Images/LogoFinal.png";
 import sv from "../Images/Bg.svg";
 import "@lottiefiles/lottie-player";
 import Lottie from "lottie-react";
 import jsons from "../Images/Animation - 1728965751053.json";
 import Marquee from "react-fast-marquee";
-import logo from '../Images/logo.png';
+import logo from '../Images/LogoFinal.png';
 
 const About = () => {
   return (
@@ -149,7 +149,7 @@ const About = () => {
               className="card"
             >
               <img
-                className="w-100"
+                className="w-100 mt-4"
                 style={{ width: "300px", height: "300px" }}
                 src={vision}
                 alt="mission"
@@ -305,12 +305,12 @@ const About = () => {
                 data-aos-once="true"
                 class="col-md-6 col-sm-12 col-12 d-flex justify-content-md-center align-items-md-center text-md-center text-start flex-column"
               >
-                <h2 class="footer-logo fw-5 fs-1">AAKAM</h2>
+                {/* <h2 class="footer-logo fw-5 fs-1">AAKAM</h2> */}
                 <img
                 src={logo}
                 alt="Logo"
                 className="footer-logo-img"
-                style={{borderRadius: "1000%"}}
+                style={{width: "200px", height: "200px", borderRadius: "1000%"}}
               />
               </div>
               {/* <div className="hr"><hr /></div> */}
