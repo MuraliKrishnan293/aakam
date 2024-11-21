@@ -21,6 +21,15 @@ const MyNavbar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    const token = localStorage.getItem('token');
+
+    const navigate = useNavigate();
+
+    const handleLogout = ()=>{
+        localStorage.removeItem('token');
+        navigate('/admin');
+    }
+
 
     return (
         <nav style={{top: "0"}} className={`navbar navbar-expand-lg position-fixed w-100 text-dark ${scrolling ? 'scrolled' : ''}`}>
@@ -45,6 +54,9 @@ const MyNavbar = () => {
                         <a style={{ color: "black" }} className="nav-link" href="/about">About</a>
                         <a style={{ color: "black" }} className="nav-link" href="/gallery">Gallery</a>
                         <a style={{ color: "black" }} className="nav-link" href="/contact">Contact</a>
+                        {token && 
+                        <button style={{ color: "black" }} onClick={handleLogout} className="nav-link">Logout</button>
+                        }
                     </div>
                 </div>
             </div>
