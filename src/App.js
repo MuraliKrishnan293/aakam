@@ -33,8 +33,8 @@ function App() {
         </div>
       ) : (
         <>
-        <Nav />
         <BrowserRouter>
+        <Nav />
           <Routes>
             <Route path='/' element={<Land />} />
             <Route path='/about' element={<About />} />
