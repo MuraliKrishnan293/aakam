@@ -5,6 +5,7 @@ import { Table, Container, Row, Col, Card, Spinner } from 'react-bootstrap';
 import moment from 'moment';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
+import Reviews from './Reviews';
 
 
 const AdminPanel = () => {
@@ -129,7 +130,7 @@ const AdminPanel = () => {
       </Container>
         </Tab>
         <Tab eventKey="Reviews" title="Reviews">
-          Reviews
+          <Reviews />
         </Tab>
       </Tabs>
         
