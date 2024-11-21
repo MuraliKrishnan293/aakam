@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import '../Styles/Admin.css';
 import axios, { HttpStatusCode } from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Admin = () => {
   const [email, setEmail] = useState("");
@@ -9,6 +11,17 @@ const Admin = () => {
   const [loading, setLoading] = useState(false);
 
   const nav = useNavigate();
+
+
+
+  const toastOptions = {
+    position: "top-left",
+    autoClose: 5000,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    theme: "dark",
+  };
 
   const handle = async(e)=>{
     e.preventDefault();
@@ -27,6 +40,7 @@ const Admin = () => {
     }
   }
     catch(e){
+      toast.error("Login failed", toastOptions);
       setLoading(false);
       console.log(e);
     }
@@ -44,6 +58,7 @@ const Admin = () => {
           <button type="submit" onClick={handle} className="login-button">{loading ? "Please Wait":"Continue"}</button>
         </form>
       </div>
+      <ToastContainer />
     </div>
   )
 }

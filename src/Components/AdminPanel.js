@@ -6,6 +6,7 @@ import moment from 'moment';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 
+
 const AdminPanel = () => {
 
     const auth = localStorage.getItem("token");
@@ -38,6 +39,10 @@ const AdminPanel = () => {
         console.log(response.data);
         setLoading(false);
     }
+
+
+
+    
 
 
     const res = async()=>{
