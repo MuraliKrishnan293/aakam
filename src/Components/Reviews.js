@@ -11,7 +11,7 @@ const Reviews = () => {
       try {
         const response = await axios.get('https://dentalsite-sparktech-2.onrender.com/app/getreviews',{
             headers: {
-              'Authorization': `Bearer ${localStorage.getItem('authToken')}`
+              'Authorization': `Bearer ${localStorage.getItem('token')}`
             }
         });
         setReviews(response.data);
