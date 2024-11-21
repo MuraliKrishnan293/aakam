@@ -185,7 +185,7 @@ const Land = () => {
 
       <div style={{overflow: "hidden"}} className="thirddiv justify-content-center text-center">
       <div className="mt-4 mb-4 text-center"><p data-aos="fade-up-left" data-aos-duration="500" style={{fontSize: "21px"}} className="mt-5">Services at</p>
-      <h4 data-aos="fade-up-right" data-aos-duration="500">Narasimha Interior Decorators</h4></div>
+      <h4 data-aos="fade-up-right" data-aos-duration="500">Aakam Interior Decorators</h4></div>
       <div className="container-fluid  w-100">
         <div className="insidediv row d-flex justify-content-center align-items-center">
             {cards.map((c)=>(
