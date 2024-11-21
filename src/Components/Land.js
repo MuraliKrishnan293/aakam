@@ -252,6 +252,7 @@ const Land = () => {
                   <p className="mt-3">Livingroom Interior</p>
                   <p className="mt-3">Modular Kitchen</p>
                   <p className="mt-3">Office Interior</p>
+                  <p className=""><a href="/admin" style={{textDecoration: "none"}} className="">Admin Login</a></p>
                 </ul>
               </div>
             </div>
@@ -289,7 +290,8 @@ const Land = () => {
                   <i class="fa fa-email"></i>aakamdesignstudio96@gmail.com
                 </p>
                 <p>
-                  <i class="fa fa-phone"></i>+91 8056491710
+                  <i class="fa fa-phone"></i>+91 8056491710&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <i class="fa fa-phone"></i>+91 63790 09438
                 </p>
               </div>
             </div>

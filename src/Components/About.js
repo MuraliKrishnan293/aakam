@@ -320,16 +320,17 @@ const About = () => {
                 data-aos-once="true"
                 class="col-md-6 col-sm-12 col-12 d-flex justify-content-md-center align-items-md-center text-md-center text-start flex-column"
               >
-                <h4 className="text-center">Our Services</h4>
+                <h4 className="">Our Services</h4>
                 <ul
-                  class="footer-services text-center"
+                  class="footer-services"
                   style={{ listStyleType: "none" }}
                 >
-                  <li className="mt-3">UPVC Windows</li>
-                  <li className="mt-3">Bedroom Interior</li>
-                  <li className="mt-3">Livingroom Interior</li>
-                  <li className="mt-3">Modular Kitchen</li>
-                  <li className="mt-3">Office Interior</li>
+                  <p className="mt-3">UPVC Windows</p>
+                  <p className="mt-3">Bedroom Interior</p>
+                  <p className="mt-3">Livingroom Interior</p>
+                  <p className="mt-3">Modular Kitchen</p>
+                  <p className="mt-3">Office Interior</p>
+                  <p className=""><a href="/admin" style={{textDecoration: "none"}} className="">Admin Login</a></p>
                 </ul>
               </div>
             </div>
@@ -367,7 +368,8 @@ const About = () => {
                   <i class="fa fa-email"></i>aakamdesignstudio96@gmail.com
                 </p>
                 <p>
-                  <i class="fa fa-phone"></i>+91 8056491710
+                  <i class="fa fa-phone"></i>+91 8056491710&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <i class="fa fa-phone"></i>+91 63790 09438
                 </p>
               </div>
             </div>

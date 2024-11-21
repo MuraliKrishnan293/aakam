@@ -43,9 +43,6 @@ const AdminPanel = () => {
 
 
 
-    
-
-
     const res = async()=>{
         const response = await axios.get('https://aakaminterior12.onrender.com/app/all-appointments',{
             headers: {

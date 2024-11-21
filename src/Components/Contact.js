@@ -194,7 +194,8 @@ export const ContactUs = () => {
           >
             <div class="row footer-con">
               <div
-                data-aos="zoom-in"
+                data-aos="fade-left"
+            data-aos-duration="1000"
                 data-aos-once="true"
                 class="col-md-6 col-sm-12 col-12 d-flex justify-content-md-center align-items-md-center text-md-center text-start flex-column"
               >
@@ -208,20 +209,22 @@ export const ContactUs = () => {
               </div>
               {/* <div className="hr"><hr /></div> */}
               <div
-                data-aos="zoom-in"
+                data-aos="fade-left"
+            data-aos-duration="1000"
                 data-aos-once="true"
                 class="col-md-6 col-sm-12 col-12 d-flex justify-content-md-center align-items-md-center text-md-center text-start flex-column"
               >
-                <h4 className="text-center">Our Services</h4>
+                <h4 className="">Our Services</h4>
                 <ul
-                  class="footer-services text-center"
+                  class="footer-services"
                   style={{ listStyleType: "none" }}
                 >
-                  <li className="mt-3">UPVC Windows</li>
-                  <li className="mt-3">Bedroom Interior</li>
-                  <li className="mt-3">Livingroom Interior</li>
-                  <li className="mt-3">Modular Kitchen</li>
-                  <li className="mt-3">Office Interior</li>
+                  <p className="mt-3">UPVC Windows</p>
+                  <p className="mt-3">Bedroom Interior</p>
+                  <p className="mt-3">Livingroom Interior</p>
+                  <p className="mt-3">Modular Kitchen</p>
+                  <p className="mt-3">Office Interior</p>
+                  <p className="bg-warning"><a href="/admin" style={{textDecoration: "none"}} className="bg-warning">Admin Login</a></p>
                 </ul>
               </div>
             </div>
@@ -234,8 +237,8 @@ export const ContactUs = () => {
                 Contact us
               </h2>
               <div
-                data-aos="zoom-in"
-                data-aos-once="true"
+                // data-aos="zoom-in"
+                // data-aos-once="true"
                 class="col-md-6 mt-3 col-sm-12 col-12 d-flex text-md-center justify-content-md-center align-items-md-center text-start justify-content-start align-items-start flex-column"
               >
                 {/* no 4, Selai Rd, Indira Gandhi Nagar,
@@ -259,7 +262,8 @@ export const ContactUs = () => {
                   <i class="fa fa-email"></i>aakamdesignstudio96@gmail.com
                 </p>
                 <p>
-                  <i class="fa fa-phone"></i>+91 8056491710
+                  <i class="fa fa-phone"></i>+91 8056491710&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <i class="fa fa-phone"></i>+91 63790 09438
                 </p>
               </div>
             </div>
