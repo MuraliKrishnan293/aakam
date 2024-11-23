@@ -296,8 +296,8 @@ const Land = () => {
         </Marquee>
       </div> */}
 
-      <div className="horizontal-scroll-container mt-5">
-      <iframe src='https://widgets.sociablekit.com/google-reviews/iframe/25491329' frameborder='0' width='100%' height='1000'></iframe>
+      <div className="horizontal-scroll-container m-5 p-5 mt-5">
+      <iframe className="p-5" src='https://widgets.sociablekit.com/google-reviews/iframe/25491329' frameborder='0' width='100%' height='500'></iframe>
       </div>
 
       <div className="foot">
