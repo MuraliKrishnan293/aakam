@@ -296,10 +296,13 @@ const Land = () => {
         </Marquee>
       </div> */}
 
-      <div className="horizontal-scroll-container m-5 p-5 mt-5">
-      <iframe className="p-5" src='https://widgets.sociablekit.com/google-reviews/iframe/25491329' frameborder='0' width='100%' height='500'></iframe>
-      </div>
+<div className="mt-5"></div>
 
+
+      <div className="horizontal-scroll-container m-md-5 p-md-5 mt-5">
+      <iframe className="p-md-5" src='https://widgets.sociablekit.com/google-reviews/iframe/25491329' frameborder='0' width='100%' height='500'></iframe>
+      </div>
+<div className="mt-5"></div>
       <div className="foot">
         <footer style={{ background: "#1e4451" }} class="foot">
           <div
