@@ -450,11 +450,11 @@ export default function Gallery() {
             style={{ background: "#1e4451", color: "white" }}
             class="container"
           >
-            <div class="row footer-con">
+            <div style={{overflowX: "hidden"}} class="row footer-con">
               <div
-                data-aos="fade-left"
-            data-aos-duration="1000"
-                data-aos-once="true"
+            //     data-aos="fade-left"
+            // data-aos-duration="1000"
+            //     data-aos-once="true"
                 class="col-md-6 col-sm-12 col-12 d-flex justify-content-md-center align-items-md-center text-md-center text-start flex-column"
               >
                 {/* <h2 class="footer-logo fw-5 fs-1">AAKAM</h2> */}
@@ -467,9 +467,9 @@ export default function Gallery() {
               </div>
               {/* <div className="hr"><hr /></div> */}
               <div
-                data-aos="fade-left"
-            data-aos-duration="1000"
-                data-aos-once="true"
+            //     data-aos="fade-left"
+            // data-aos-duration="1000"
+            //     data-aos-once="true"
                 class="col-md-6 col-sm-12 col-12 d-flex justify-content-md-center align-items-md-center text-md-center text-start flex-column"
               >
                 <h4 className="">Our Services</h4>
