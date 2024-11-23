@@ -297,7 +297,7 @@ const Land = () => {
       </div> */}
 
       <div className="horizontal-scroll-container mt-5">
-      <iframe src='https://widgets.sociablekit.com/google-reviews/iframe/25491323' frameborder='0' width='100%' height='1000'></iframe>
+      <iframe src='https://widgets.sociablekit.com/google-reviews/iframe/25491329' frameborder='0' width='100%' height='1000'></iframe>
       </div>
 
       <div className="foot">
