@@ -49,6 +49,12 @@ const Admin = () => {
 
   const auth = localStorage.getItem("token");
 
+  if(auth){
+    nav("/admin-panel");
+    toast.success("Already Logged In");
+    return;
+  }
+
   return (<>
     {!auth && (<div className="login-container">
       <div className="login-box">
