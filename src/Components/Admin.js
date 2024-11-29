@@ -47,8 +47,10 @@ const Admin = () => {
     }
   }
 
-  return (
-    <div className="login-container">
+  const auth = localStorage.getItem("token");
+
+  return (<>
+    {!auth && (<div className="login-container">
       <div className="login-box">
         <div className="login-icon">
           <p className="user-icon">👤</p>
@@ -60,7 +62,7 @@ const Admin = () => {
         </form>
       </div>
       <ToastContainer />
-    </div>
+    </div>)}</>
   )
 }
 
