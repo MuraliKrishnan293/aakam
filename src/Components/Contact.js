@@ -224,7 +224,7 @@ export const ContactUs = () => {
                   <p className="mt-3">Livingroom Interior</p>
                   <p className="mt-3">Modular Kitchen</p>
                   <p className="mt-3">Office Interior</p>
-                  <p className="bg-warning"><a href="/admin" style={{textDecoration: "none"}}>Admin Login</a></p>
+                  <p className=""><a href="/admin" style={{textDecoration: "none"}}>Admin Login</a></p>
                 </ul>
               </div>
             </div>

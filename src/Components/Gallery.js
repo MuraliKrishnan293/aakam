@@ -30,12 +30,21 @@ import o3 from '../OfficeImages/modern-hotel-lobby-with-hallway-office-lounge-ro
 import o4 from '../OfficeImages/modern-minimalist-office.jpg';
 import o5 from '../OfficeImages/pexels-pixabay-263209.jpg';
 
+import b1 from './Kitchen/WhatsApp Image 2024-11-23 at 9.30.15 PM (1).jpeg';
+import b2 from './Kitchen/WhatsApp Image 2024-11-23 at 9.30.15 PM (2).jpeg';
+import b3 from './Kitchen/WhatsApp Image 2024-11-23 at 9.30.15 PM.jpeg';
+import b4 from './Kitchen/WhatsApp Image 2024-11-23 at 9.30.16 PM (1).jpeg';
+import b5 from './Kitchen/WhatsApp Image 2024-11-23 at 9.30.16 PM.jpeg';
+import Kit from "./Kit";
+
 export default function Gallery() {
   const variantsall = {
     initial: { scale: 0.5, opacity: 0 },
     animate: { scale: 1, opacity: 1 },
     transition: { duration: 5, staggerChildren: 0.2 },
   };
+
+  const kitchen = [b1, b2, b3, b4, b5];
 
   const pvc = [p1, p2, p3, p4, p5, p6, p7, p8, p9, p10];
 
@@ -232,7 +241,6 @@ export default function Gallery() {
         <div
         data-aos="fade-up"
         data-aos-anchor-placement="top-center"
-        // data-aos-delay="1000"
         data-aos-duration="1000"
         className="col-md-6 text-black">
           <h2 className="mb-3">Office Interiors</h2>
@@ -253,194 +261,7 @@ export default function Gallery() {
         </div>
       </div>
 
-      <div
-      style={{overflow: "hidden"}}
-        variants={variantsall}
-        initial="initial"
-        whileInView="animate"
-        transition={{ duration: 1 }}
-        className="row mb-5 align-items-center"
-      >
-        <div className="col-md-6 order-md-2">
-          <div className="text-center mb-4">
-            <img
-            // data-aos="fade-up"
-            data-aos="fade-right"
-            // data-aos-delay="1000"
-            data-aos-duration="1000"
-              style={{ width: "400px", height: "400px" }}
-              src={i1}
-              className="img-fluid btn rounded shadow-lg"
-              alt="Software Development"
-              data-bs-toggle="modal"
-              data-bs-target="#staticBackdrop"
-            />
-
-            <div
-              class="modal fade"
-              id="staticBackdrop"
-              data-bs-backdrop="static"
-              data-bs-keyboard="false"
-              tabindex="-1"
-              aria-labelledby="staticBackdropLabel"
-              aria-hidden="true"
-            >
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h1
-                      className="text-black modal-title fs-5"
-                      id="staticBackdropLabel"
-                    >
-                      UPVC Window Works
-                    </h1>
-                    <button
-                      type="button"
-                      class="btn-close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    ></button>
-                  </div>
-                  <div class="modal-body">
-                    <SimpleImageSlider
-                      width="94%"
-                      height="450px"
-                      // style={{objectFit: "contain"}}
-                      images={pvc}
-                      showBullets={true}
-                      showNavs={true}
-                    />
-                  </div>
-                  <div class="modal-footer">
-                    <button
-                      type="button"
-                      class="btn btn-secondary"
-                      data-bs-dismiss="modal"
-                    >
-                      Close
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-        // data-aos="fade-up"
-        data-aos="zoom-in"
-        // data-aos-delay="1000"
-        data-aos-duration="1000"
-          variants={variantsall}
-          initial="initial"
-          whileInView="animate"
-          transition={{ duration: 1 }}
-          className="col-md-6 text-white order-md-1"
-        >
-          <h2 className="mb-3">UPVC Windows</h2>
-          <p className="text-black">
-            Discover the perfect blend of style, durability, and energy
-            efficiency with our UPVC windows. Designed to withstand the harshest
-            weather conditions, these windows are not only robust and
-            long-lasting but also provide superior insulation, helping to
-            maintain a comfortable indoor temperature year-round. Our UPVC
-            windows come in a variety of styles and finishes, allowing you to
-            customize the look to match your home's aesthetic. With easy
-            maintenance and excellent noise reduction properties, they are the
-            ideal choice for modern living. Our team of experts will guide you
-            through the selection process, ensuring that you find the perfect
-            windows to enhance the beauty and functionality of your home.
-            Upgrade to UPVC windows and experience the difference in quality and
-            performance.
-          </p>
-        </div>
-      </div>
-
-      <div
-      style={{overflow: "hidden"}}
-        variants={variantsall}
-        initial="initial"
-        whileInView="animate"
-        transition={{ duration: 1 }}
-        className="row mb-5 align-items-center"
-      >
-        <div className="col-md-6">
-          <div className="text-center mb-4">
-            <img
-            data-aos="fade-right"
-            data-aos-duration="1000"
-              src={i2}
-              className="img-fluid btn rounded shadow-lg"
-              alt="UI/UX Design"
-              data-bs-toggle="modal"
-              data-bs-target="#staticBackdrop1"
-            />
-             <div
-  className="modal fade"
-  id="staticBackdrop1" // Ensure this matches the data-bs-target in the image
-  data-bs-backdrop="static"
-  data-bs-keyboard="false"
-  tabIndex="-1"
-  aria-labelledby="staticBackdropLabel"
-  aria-hidden="true"
->
-  <div className="modal-dialog">
-    <div className="modal-content">
-      <div className="modal-header">
-        <h1 className="text-black modal-title fs-5" id="staticBackdropLabel">
-          Office Interiors
-        </h1>
-        <button
-          type="button"
-          className="btn-close"
-          data-bs-dismiss="modal"
-          aria-label="Close"
-        ></button>
-      </div>
-      <div className="modal-body">
-        <SimpleImageSlider
-          width="94%"
-          height="450px"
-          images={office}
-          showBullets={true}
-          showNavs={true}
-        />
-      </div>
-      <div className="modal-footer">
-        <button
-          type="button"
-          className="btn btn-secondary"
-          data-bs-dismiss="modal"
-        >
-          Close
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-
-          </div>
-        </div>
-        <div
-        data-aos="fade-left"
-            data-aos-duration="1000"
-        className="col-md-6 text-black">
-          <h2 className="mb-3">Office Interiors</h2>
-          <p className="text-black">
-            Elevate your workspace with our comprehensive office interior design
-            services. We specialize in creating environments that are not only
-            visually appealing but also foster productivity and collaboration.
-            Our team understands the importance of a well-designed office space
-            in enhancing employee well-being and performance. From ergonomic
-            furniture and efficient layouts to modern lighting and innovative
-            storage solutions, we ensure every element is tailored to your
-            specific needs and preferences. Our goal is to transform your office
-            into a dynamic, functional, and inspiring place where creativity and
-            efficiency thrive. Experience the perfect blend of style and
-            functionality with our office interior solutions, and watch your
-            business flourish in an environment designed for success.
-          </p>
-        </div>
-      </div>
+      <Kit />
 
       
     </div>
