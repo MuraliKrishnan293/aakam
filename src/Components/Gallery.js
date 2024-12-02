@@ -312,9 +312,12 @@ export default function Gallery1() {
       {windowsieze > 800 &&
       (
         <>
-        <div className="container">
+        <div className="container" style={{overflowY: "hidden"}}>
         <div className="a row">
-  <div className="a1 col-md-6 col-12">
+  <div data-aos="fade-up"
+                data-aos-anchor-placement="top-center"
+                data-aos-delay="100"
+                data-aos-duration="1000" className="a1 col-md-6 col-12">
   <h2 className="mb-3 text-black text-start">UPVC Windows</h2>
           <p className="text-black text-start">
             Discover the perfect blend of style, durability, and energy
@@ -330,7 +333,12 @@ export default function Gallery1() {
             windows to enhance the beauty and functionality of your home.
           </p>
   </div>
-  <div className="a1 col-md-6 col-12">
+  <div data-aos="fade-up"
+                data-aos-anchor-placement="top-center"
+                data-aos-delay="100"
+                data-aos-duration="1000"
+                data-aos-delay='200'
+                className="a1 col-md-6 col-12">
 <div style={{maxHeight: "400px", overflowY: "hidden", borderRadius: "10px"}} id="carouselExample" className="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
         <div className="carousel-inner">
           {pvc.map((image, index) => (
@@ -372,7 +380,13 @@ export default function Gallery1() {
 
       <div className="a row mt-5 pt-5">
   
-  <div className="a1 col-md-6 col-12">
+  <div
+  data-aos="fade-up"
+  data-aos-anchor-placement="top-center"
+  data-aos-delay="100"
+  data-aos-duration="1000"
+  // data-aos-delay='200'
+  className="a1 col-md-6 col-12">
 <div style={{maxHeight: "400px", overflowY: "hidden", borderRadius: "10px"}} id="carouselExample2" className="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
         <div className="carousel-inner">
           {office.map((image, index) => (
@@ -410,7 +424,13 @@ export default function Gallery1() {
           <span className="visually-hidden">Next</span>
         </button>
       </div></div>
-      <div className="a1 col-md-6 col-12">
+      <div
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-center"
+      data-aos-delay="100"
+      data-aos-duration="1000"
+      data-aos-delay='200'
+      className="a1 col-md-6 col-12">
   <h2 className="mb-3 text-black text-start">Office Interiors</h2>
           <p className="text-black text-start">
           Elevate your workspace with our comprehensive office interior design
@@ -430,7 +450,13 @@ export default function Gallery1() {
       </div>
 
       <div className="a row mt-5 pt-5">
-  <div className="a1 col-md-6 col-12">
+  <div
+  data-aos="fade-up"
+  data-aos-anchor-placement="top-center"
+  data-aos-delay="100"
+  data-aos-duration="1000"
+  // data-aos-delay='200'
+  className="a1 col-md-6 col-12">
   <h2 className='text-black text-start'>Modern Kitchens</h2>
 <p className="text-start">
   Transform your cooking experience with a sleek, modern kitchen designed to be both functional and stylish. 
@@ -448,7 +474,13 @@ export default function Gallery1() {
   Let us help you design the kitchen of your dreams that blends form and function seamlessly.
 </p>
   </div>
-  <div className="a1 col-md-6 col-12">
+  <div
+  data-aos="fade-up"
+  data-aos-anchor-placement="top-center"
+  data-aos-delay="100"
+  data-aos-duration="1000"
+  data-aos-delay='200'
+  className="a1 col-md-6 col-12">
 <div style={{maxHeight: "400px", overflowY: "hidden", borderRadius: "10px"}} id="carouselExample3" className="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
         <div className="carousel-inner">
           {kitchen.map((image, index) => (
@@ -490,7 +522,13 @@ export default function Gallery1() {
 
       <div className="a row mt-5 pt-5">
   
-  <div className="a1 col-md-6 col-12">
+  <div
+  data-aos="fade-up"
+  data-aos-anchor-placement="top-center"
+  data-aos-delay="100"
+  data-aos-duration="1000"
+  // data-aos-delay='200'
+  className="a1 col-md-6 col-12">
 <div style={{maxHeight: "400px", overflowY: "hidden", borderRadius: "10px"}} id="carouselExample4" className="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
         <div className="carousel-inner">
           {bed.map((image, index) => (
@@ -528,7 +566,13 @@ export default function Gallery1() {
           <span className="visually-hidden">Next</span>
         </button>
       </div></div>
-      <div className="a1 col-md-6 col-12">
+      <div
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-center"
+      data-aos-delay="100"
+      data-aos-duration="1000"
+      data-aos-delay='200'
+      className="a1 col-md-6 col-12">
       <h2 className="text-start text-black">Cozy Bedrooms</h2>
 <p className="text-start">
   Your bedroom should be your sanctuary—a place to relax and unwind. Our bedroom designs are crafted with comfort and style in mind. 
@@ -551,7 +595,13 @@ export default function Gallery1() {
 
 
       <div className="a row mt-5 pt-5">
-  <div className="a1 col-md-6 col-12">
+  <div
+  data-aos="fade-up"
+  data-aos-anchor-placement="top-center"
+  data-aos-delay="100"
+  data-aos-duration="1000"
+  // data-aos-delay='200'
+  className="a1 col-md-6 col-12">
   <h2 className='text-black text-start'>Stylish Living Rooms</h2>
 <p className="text-start">
   Your living room is the heart of your home—a place for family gatherings, relaxing, and entertaining guests. Our living room designs focus on 
@@ -569,7 +619,13 @@ export default function Gallery1() {
   your living room will be the perfect backdrop for every occasion.
 </p>
   </div>
-  <div className="a1 col-md-6 col-12">
+  <div
+  data-aos="fade-up"
+  data-aos-anchor-placement="top-center"
+  data-aos-delay="100"
+  data-aos-duration="1000"
+  data-aos-delay='200'
+  className="a1 col-md-6 col-12">
 <div style={{maxHeight: "400px", overflowY: "hidden", borderRadius: "10px"}} id="carouselExample5" className="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
         <div className="carousel-inner">
           {liv.map((image, index) => (
@@ -642,7 +698,13 @@ export default function Gallery1() {
         <>
         <div className="container">
         <div className="a row" style={{border: "0.5px solid whitesmoke"}}>
-  <div className="a1 col-md-12 col-12">
+  <div
+  data-aos="fade-up"
+  data-aos-anchor-placement="top-center"
+  data-aos-delay="100"
+  data-aos-duration="1000"
+  // data-aos-delay='200'
+  className="a1 col-md-12 col-12">
   <h2 className="mb-3 text-black text-start">UPVC Windows</h2>
           <p className="text-black text-start">
             Discover the perfect blend of style, durability, and energy
@@ -652,7 +714,13 @@ export default function Gallery1() {
             maintain a comfortable indoor temperature year-round.
           </p>
   </div>
-  <div className="a1 col-md-12 col-12">
+  <div
+  data-aos="fade-up"
+  data-aos-anchor-placement="top-center"
+  data-aos-delay="100"
+  data-aos-duration="1000"
+  data-aos-delay='200'
+  className="a1 col-md-12 col-12">
 <div style={{maxHeight: "400px", overflowY: "hidden", borderRadius: "10px"}} id="carouselExample" className="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
         <div className="carousel-inner">
           {pvc.map((image, index) => (
@@ -693,7 +761,13 @@ export default function Gallery1() {
       </div>
 
       <div className="a row mt-5 pt-5">
-      <div className="a1 col-md-12 col-12">
+      <div
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-center"
+      data-aos-delay="100"
+      data-aos-duration="1000"
+      // data-aos-delay='200'
+      className="a1 col-md-12 col-12">
   <h2 className="mb-3 text-black text-start">Office Interiors</h2>
           <p className="text-black text-start">
           Elevate your workspace with our comprehensive office interior design
@@ -703,7 +777,13 @@ export default function Gallery1() {
             in enhancing employee well-being and performance.
           </p>
   </div>
-  <div className="a1 col-md-6 col-12">
+  <div
+  data-aos="fade-up"
+  data-aos-anchor-placement="top-center"
+  data-aos-delay="100"
+  data-aos-duration="1000"
+  data-aos-delay='200'
+  className="a1 col-md-6 col-12">
 <div style={{maxHeight: "400px", overflowY: "hidden", borderRadius: "10px"}} id="carouselExample2" className="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
         <div className="carousel-inner">
           {office.map((image, index) => (
@@ -745,7 +825,13 @@ export default function Gallery1() {
       </div>
 
       <div className="a row mt-5 pt-5">
-  <div className="a1 col-md-6 col-12">
+  <div
+  data-aos="fade-up"
+  data-aos-anchor-placement="top-center"
+  data-aos-delay="100"
+  data-aos-duration="1000"
+  // data-aos-delay='200'
+  className="a1 col-md-6 col-12">
   <h2 className='text-black text-start'>Modern Kitchens</h2>
 <p className="text-start">
   Transform your cooking experience with a sleek, modern kitchen designed to be both functional and stylish. 
@@ -763,7 +849,13 @@ export default function Gallery1() {
   Let us help you design the kitchen of your dreams that blends form and function seamlessly.
 </p>
   </div>
-  <div className="a1 col-md-6 col-12">
+  <div
+  data-aos="fade-up"
+  data-aos-anchor-placement="top-center"
+  data-aos-delay="100"
+  data-aos-duration="1000"
+  data-aos-delay='200'
+  className="a1 col-md-6 col-12">
 <div style={{maxHeight: "400px", overflowY: "hidden", borderRadius: "10px"}} id="carouselExample3" className="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
         <div className="carousel-inner">
           {kitchen.map((image, index) => (
@@ -804,7 +896,13 @@ export default function Gallery1() {
       </div>
 
       <div className="a row mt-5 pt-5">
-      <div className="a1 col-md-6 col-12">
+      <div
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-center"
+      data-aos-delay="100"
+      data-aos-duration="1000"
+      // data-aos-delay='200'
+      className="a1 col-md-6 col-12">
       <h2 className="text-start text-black">Cozy Bedrooms</h2>
 <p className="text-start">
   Your bedroom should be your sanctuary—a place to relax and unwind. Our bedroom designs are crafted with comfort and style in mind. 
@@ -822,7 +920,13 @@ export default function Gallery1() {
   Turn your bedroom into a peaceful retreat that you’ll love spending time in. Our designs make your space cozy and inviting.
 </p>
   </div>
-  <div className="a1 col-md-6 col-12">
+  <div
+  data-aos="fade-up"
+  data-aos-anchor-placement="top-center"
+  data-aos-delay="100"
+  data-aos-duration="1000"
+  data-aos-delay='200'
+  className="a1 col-md-6 col-12">
 <div style={{maxHeight: "400px", overflowY: "hidden", borderRadius: "10px"}} id="carouselExample4" className="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
         <div className="carousel-inner">
           {bed.map((image, index) => (
@@ -866,7 +970,13 @@ export default function Gallery1() {
 
 
       <div className="a row mt-5 pt-5">
-  <div className="a1 col-md-6 col-12">
+  <div
+  data-aos="fade-up"
+  data-aos-anchor-placement="top-center"
+  data-aos-delay="100"
+  data-aos-duration="1000"
+  // data-aos-delay='200'
+  className="a1 col-md-6 col-12">
   <h2 className='text-black text-start'>Stylish Living Rooms</h2>
 <p className="text-start">
   Your living room is the heart of your home—a place for family gatherings, relaxing, and entertaining guests. Our living room designs focus on 
@@ -884,7 +994,13 @@ export default function Gallery1() {
   your living room will be the perfect backdrop for every occasion.
 </p>
   </div>
-  <div className="a1 col-md-6 col-12">
+  <div
+  data-aos="fade-up"
+  data-aos-anchor-placement="top-center"
+  data-aos-delay="100"
+  data-aos-duration="1000"
+  data-aos-delay='200'
+  className="a1 col-md-6 col-12">
 <div style={{maxHeight: "400px", overflowY: "hidden", borderRadius: "10px"}} id="carouselExample5" className="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
         <div className="carousel-inner">
           {liv.map((image, index) => (
@@ -944,14 +1060,32 @@ export default function Gallery1() {
 
 
     {/* <div className="video embed container-fluid"> */}
-    <h2 className="text-center text-black mt-5">Our Makings</h2>
+    <h2
+    data-aos="fade-up"
+    data-aos-anchor-placement="top-center"
+    data-aos-delay="100"
+    data-aos-duration="1000"
+    data-aos-delay='200'
+    className="text-center text-black mt-5">Our Makings</h2>
       <div className="d-flex p-5 flex-wrap flex-lg-row flex-md-row flx-sm-row flex-column">
-        <div className="col-md-6 col-sm-12 col-12 d-flex justify-content-center align-items-center text-center text-center">
+        <div
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-center"
+        data-aos-delay="100"
+        data-aos-duration="1000"
+        data-aos-delay='200'
+        className="col-md-6 col-sm-12 col-12 d-flex justify-content-center align-items-center text-center text-center">
         <video width="100%" height="500" autoPlay loop muted>
   <source src={v1} type="video/mp4" />
 </video>
         </div>
-        <div className="col-md-6 mt-5 mt-sm-0 mt-md-0 mt-lg-0 col-sm-12 col-12 d-flex justify-content-center align-items-center text-center">
+        <div
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-center"
+        data-aos-delay="100"
+        data-aos-duration="1000"
+        data-aos-delay='200'
+        className="col-md-6 mt-5 mt-sm-0 mt-md-0 mt-lg-0 col-sm-12 col-12 d-flex justify-content-center align-items-center text-center">
         <video width="100%" height="500" autoPlay loop muted>
   <source src={v2} type="video/mp4" />
 </video>
