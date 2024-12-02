@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import SimpleImageSlider from "react-simple-image-slider";
 import '../Styles/Gallery.css';
 import logo from '../Images/LogoFinal.png';
@@ -37,7 +37,53 @@ import b4 from './Kitchen/WhatsApp Image 2024-11-23 at 9.30.16 PM (1).jpeg';
 import b5 from './Kitchen/WhatsApp Image 2024-11-23 at 9.30.16 PM.jpeg';
 import Kit from "./Kit";
 
-export default function Gallery() {
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+// Living Room Images
+import l1 from '../Images/LivingRoom/WhatsApp Image 2024-11-23 at 9.32.59 PM (1).jpeg';
+import l2 from '../Images/LivingRoom/WhatsApp Image 2024-11-23 at 9.32.59 PM (2).jpeg';
+import l3 from '../Images/LivingRoom/WhatsApp Image 2024-11-23 at 9.32.59 PM.jpeg';
+import l4 from '../Images/LivingRoom/WhatsApp Image 2024-11-23 at 9.33.00 PM (1).jpeg';
+import l5 from '../Images/LivingRoom/WhatsApp Image 2024-11-23 at 9.33.00 PM.jpeg';
+
+// Bedroom Images
+import b11 from '../Images/Bedroom/WhatsApp Image 2024-11-23 at 9.31.25 PM (1).jpeg';
+import b22 from '../Images/Bedroom/WhatsApp Image 2024-11-23 at 9.31.25 PM (2).jpeg';
+import b33 from '../Images/Bedroom/WhatsApp Image 2024-11-23 at 9.31.25 PM (3).jpeg';
+import b44 from '../Images/Bedroom/WhatsApp Image 2024-11-23 at 9.31.25 PM.jpeg';
+import b55 from '../Images/Bedroom/WhatsApp Image 2024-11-23 at 9.31.26 PM.jpeg';
+
+
+
+
+//Videos
+import v1 from '../OfficeImages/WhatsApp Video 2024-12-02 at 9.17.05 PM (1).mp4';
+import v2 from '../OfficeImages/WhatsApp Video 2024-12-02 at 9.17.05 PM.mp4';
+
+export default function Gallery1() {
+
+
+  const [windowsieze, setWindowSize] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowSize(window.innerWidth);
+    };
+  
+    window.addEventListener('resize', handleResize);
+  
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+
+
+  const bed = [b11,b22,b33,b44,b55];
+  const liv = [l1,l2,l3,l4,l5];
+  
+
+
+
   const variantsall = {
     initial: { scale: 0.5, opacity: 0 },
     animate: { scale: 1, opacity: 1 },
@@ -66,7 +112,7 @@ export default function Gallery() {
         </div>
       </div>
 
-      <div
+       {/* <div
       style={{overflow: "hidden"}}
         variants={variantsall}
         initial="initial"
@@ -120,7 +166,7 @@ export default function Gallery() {
                   <div class="modal-body">
                     <SimpleImageSlider
                       width="94%"
-                      height="450px"
+                      height="410px"
                       // style={{objectFit: "contain"}}
                       images={pvc}
                       showBullets={true}
@@ -217,7 +263,7 @@ export default function Gallery() {
       <div className="modal-body">
         <SimpleImageSlider
           width="94%"
-          height="450px"
+          height="410px"
           images={office}
           showBullets={true}
           showNavs={true}
@@ -261,10 +307,663 @@ export default function Gallery() {
         </div>
       </div>
 
-      <Kit />
+      <Kit /> */}
+
+      {windowsieze > 800 &&
+      (
+        <>
+        <div className="container">
+        <div className="a row">
+  <div className="a1 col-md-6 col-12">
+  <h2 className="mb-3 text-black text-start">UPVC Windows</h2>
+          <p className="text-black text-start">
+            Discover the perfect blend of style, durability, and energy
+            efficiency with our UPVC windows. Designed to withstand the harshest
+            weather conditions, these windows are not only robust and
+            long-lasting but also provide superior insulation, helping to
+            maintain a comfortable indoor temperature year-round. Our UPVC
+            windows come in a variety of styles and finishes, allowing you to
+            customize the look to match your home's aesthetic. With easy
+            maintenance and excellent noise reduction properties, they are the
+            ideal choice for modern living. Our team of experts will guide you
+            through the selection process, ensuring that you find the perfect
+            windows to enhance the beauty and functionality of your home.
+          </p>
+  </div>
+  <div className="a1 col-md-6 col-12">
+<div style={{maxHeight: "400px", overflowY: "hidden", borderRadius: "10px"}} id="carouselExample" className="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
+        <div className="carousel-inner">
+          {pvc.map((image, index) => (
+            <div
+              key={index}
+              className={`carousel-item ${index === 0 ? 'active' : ''}`}
+            >
+              <img
+                src={image}
+                className="d-block w-100"
+                alt={`PVC Service ${index + 1}`}
+                style={{ height: "400px", objectFit: "cover" }}
+              />
+            </div>
+          ))}
+        </div>
+
+        <button
+          className="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="prev"
+        >
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Previous</span>
+        </button>
+
+        <button
+          className="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="next"
+        >
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Next</span>
+        </button>
+      </div></div>
+      </div>
+
+      <div className="a row mt-5 pt-5">
+  
+  <div className="a1 col-md-6 col-12">
+<div style={{maxHeight: "400px", overflowY: "hidden", borderRadius: "10px"}} id="carouselExample2" className="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
+        <div className="carousel-inner">
+          {office.map((image, index) => (
+            <div
+              key={index}
+              className={`carousel-item ${index === 0 ? 'active' : ''}`}
+            >
+              <img
+                src={image}
+                className="d-block w-100"
+                alt={`PVC Service ${index + 1}`}
+                style={{ height: "400px", objectFit: "cover" }}
+              />
+            </div>
+          ))}
+        </div>
+
+        <button
+          className="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExample2"
+          data-bs-slide="prev"
+        >
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Previous</span>
+        </button>
+
+        <button
+          className="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExample2"
+          data-bs-slide="next"
+        >
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Next</span>
+        </button>
+      </div></div>
+      <div className="a1 col-md-6 col-12">
+  <h2 className="mb-3 text-black text-start">Office Interiors</h2>
+          <p className="text-black text-start">
+          Elevate your workspace with our comprehensive office interior design
+            services. We specialize in creating environments that are not only
+            visually appealing but also foster productivity and collaboration.
+            Our team understands the importance of a well-designed office space
+            in enhancing employee well-being and performance. From ergonomic
+            furniture and efficient layouts to modern lighting and innovative
+            storage solutions, we ensure every element is tailored to your
+            specific needs and preferences. Our goal is to transform your office
+            into a dynamic, functional, and inspiring place where creativity and
+            efficiency thrive. Experience the perfect blend of style and
+            functionality with our office interior solutions, and watch your
+            business flourish in an environment designed for success.
+          </p>
+  </div>
+      </div>
+
+      <div className="a row mt-5 pt-5">
+  <div className="a1 col-md-6 col-12">
+  <h2 className='text-black text-start'>Modern Kitchens</h2>
+<p className="text-start">
+  Transform your cooking experience with a sleek, modern kitchen designed to be both functional and stylish. 
+  From spacious countertops to state-of-the-art appliances, our kitchens are built for convenience and luxury.
+  Whether you’re looking for minimalist designs or a more traditional look, we offer a range of options to suit your tastes.
+</p>
+<ul className='list-styled-none text-start' style={{listStyle: "none"}}>
+  <li>Customized Cabinetry</li>
+  <li>High-End Appliances</li>
+  <li>Space-Saving Storage Solutions</li>
+  <li>Eco-Friendly Materials</li>
+  <li>Smart Kitchen Technology</li>
+</ul>
+<p className="text-start">
+  Let us help you design the kitchen of your dreams that blends form and function seamlessly.
+</p>
+  </div>
+  <div className="a1 col-md-6 col-12">
+<div style={{maxHeight: "400px", overflowY: "hidden", borderRadius: "10px"}} id="carouselExample3" className="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
+        <div className="carousel-inner">
+          {kitchen.map((image, index) => (
+            <div
+              key={index}
+              className={`carousel-item ${index === 0 ? 'active' : ''}`}
+            >
+              <img
+                src={image}
+                className="d-block w-100"
+                alt={`PVC Service ${index + 1}`}
+                style={{ height: "400px", objectFit: "cover" }}
+              />
+            </div>
+          ))}
+        </div>
+
+        <button
+          className="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExample3"
+          data-bs-slide="prev"
+        >
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Previous</span>
+        </button>
+
+        <button
+          className="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExample3"
+          data-bs-slide="next"
+        >
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Next</span>
+        </button>
+      </div></div>
+      </div>
+
+      <div className="a row mt-5 pt-5">
+  
+  <div className="a1 col-md-6 col-12">
+<div style={{maxHeight: "400px", overflowY: "hidden", borderRadius: "10px"}} id="carouselExample4" className="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
+        <div className="carousel-inner">
+          {bed.map((image, index) => (
+            <div
+              key={index}
+              className={`carousel-item ${index === 0 ? 'active' : ''}`}
+            >
+              <img
+                src={image}
+                className="d-block w-100"
+                alt={`PVC Service ${index + 1}`}
+                style={{ height: "400px", objectFit: "cover" }}
+              />
+            </div>
+          ))}
+        </div>
+
+        <button
+          className="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExample4"
+          data-bs-slide="prev"
+        >
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Previous</span>
+        </button>
+
+        <button
+          className="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExample4"
+          data-bs-slide="next"
+        >
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Next</span>
+        </button>
+      </div></div>
+      <div className="a1 col-md-6 col-12">
+      <h2 className="text-start text-black">Cozy Bedrooms</h2>
+<p className="text-start">
+  Your bedroom should be your sanctuary—a place to relax and unwind. Our bedroom designs are crafted with comfort and style in mind. 
+  From comfortable mattresses to luxurious bedding, we ensure every detail is considered for your perfect night's sleep. 
+  Create a retreat that reflects your style with our range of customizable furniture and decor options.
+</p>
+<ul className="text-start" style={{listStyle: "none"}}>
+  <li>Comfortable Bed Frames</li>
+  <li>Luxury Bedding and Mattresses</li>
+  <li>Stylish Storage Solutions</li>
+  <li>Personalized Lighting</li>
+  <li>Custom Closets and Wardrobes</li>
+</ul>
+<p className="text-start">
+  Turn your bedroom into a peaceful retreat that you’ll love spending time in. Our designs make your space cozy and inviting.
+</p>
+  </div>
+      </div>
+
+
+
+      <div className="a row mt-5 pt-5">
+  <div className="a1 col-md-6 col-12">
+  <h2 className='text-black text-start'>Stylish Living Rooms</h2>
+<p className="text-start">
+  Your living room is the heart of your home—a place for family gatherings, relaxing, and entertaining guests. Our living room designs focus on 
+  comfort and elegance, offering you a blend of luxury and practicality. From modern sofas to multi-functional furniture, we cater to every style.
+</p>
+<ul className="text-start" style={{listStyle: "none"}}>
+  <li>Comfortable Sofas and Seating</li>
+  <li>Modern Coffee Tables and Side Tables</li>
+  <li>Entertainment and Media Units</li>
+  <li>Decorative Accessories</li>
+  <li>Innovative Storage Solutions</li>
+</ul>
+<p className="text-start">
+  With our living room designs, you can create a space that is both inviting and functional. Whether you're hosting a party or enjoying a quiet evening, 
+  your living room will be the perfect backdrop for every occasion.
+</p>
+  </div>
+  <div className="a1 col-md-6 col-12">
+<div style={{maxHeight: "400px", overflowY: "hidden", borderRadius: "10px"}} id="carouselExample5" className="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
+        <div className="carousel-inner">
+          {liv.map((image, index) => (
+            <div
+              key={index}
+              className={`carousel-item ${index === 0 ? 'active' : ''}`}
+            >
+              <img
+                src={image}
+                className="d-block w-100"
+                alt={`PVC Service ${index + 1}`}
+                style={{ height: "400px", objectFit: "cover" }}
+              />
+            </div>
+          ))}
+        </div>
+
+        <button
+          className="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExample5"
+          data-bs-slide="prev"
+        >
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Previous</span>
+        </button>
+
+        <button
+          className="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExample5"
+          data-bs-slide="next"
+        >
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Next</span>
+        </button>
+      </div></div>
+      </div></div>
+        </>
+      )
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      {windowsieze <= 800 && (
+        <>
+        <>
+        <div className="container">
+        <div className="a row" style={{border: "0.5px solid whitesmoke"}}>
+  <div className="a1 col-md-12 col-12">
+  <h2 className="mb-3 text-black text-start">UPVC Windows</h2>
+          <p className="text-black text-start">
+            Discover the perfect blend of style, durability, and energy
+            efficiency with our UPVC windows. Designed to withstand the harshest
+            weather conditions, these windows are not only robust and
+            long-lasting but also provide superior insulation, helping to
+            maintain a comfortable indoor temperature year-round.
+          </p>
+  </div>
+  <div className="a1 col-md-12 col-12">
+<div style={{maxHeight: "400px", overflowY: "hidden", borderRadius: "10px"}} id="carouselExample" className="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
+        <div className="carousel-inner">
+          {pvc.map((image, index) => (
+            <div
+              key={index}
+              className={`carousel-item ${index === 0 ? 'active' : ''}`}
+            >
+              <img
+                src={image}
+                className="d-block w-100"
+                alt={`PVC Service ${index + 1}`}
+                style={{ height: "400px", objectFit: "cover" }}
+              />
+            </div>
+          ))}
+        </div>
+
+        <button
+          className="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="prev"
+        >
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Previous</span>
+        </button>
+
+        <button
+          className="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="next"
+        >
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Next</span>
+        </button>
+      </div></div>
+      </div>
+
+      <div className="a row mt-5 pt-5">
+      <div className="a1 col-md-12 col-12">
+  <h2 className="mb-3 text-black text-start">Office Interiors</h2>
+          <p className="text-black text-start">
+          Elevate your workspace with our comprehensive office interior design
+            services. We specialize in creating environments that are not only
+            visually appealing but also foster productivity and collaboration.
+            Our team understands the importance of a well-designed office space
+            in enhancing employee well-being and performance.
+          </p>
+  </div>
+  <div className="a1 col-md-6 col-12">
+<div style={{maxHeight: "400px", overflowY: "hidden", borderRadius: "10px"}} id="carouselExample2" className="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
+        <div className="carousel-inner">
+          {office.map((image, index) => (
+            <div
+              key={index}
+              className={`carousel-item ${index === 0 ? 'active' : ''}`}
+            >
+              <img
+                src={image}
+                className="d-block w-100"
+                alt={`PVC Service ${index + 1}`}
+                style={{ height: "400px", objectFit: "cover" }}
+              />
+            </div>
+          ))}
+        </div>
+
+        <button
+          className="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExample2"
+          data-bs-slide="prev"
+        >
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Previous</span>
+        </button>
+
+        <button
+          className="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExample2"
+          data-bs-slide="next"
+        >
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Next</span>
+        </button>
+      </div></div>
+      
+      </div>
+
+      <div className="a row mt-5 pt-5">
+  <div className="a1 col-md-6 col-12">
+  <h2 className='text-black text-start'>Modern Kitchens</h2>
+<p className="text-start">
+  Transform your cooking experience with a sleek, modern kitchen designed to be both functional and stylish. 
+  From spacious countertops to state-of-the-art appliances, our kitchens are built for convenience and luxury.
+  Whether you’re looking for minimalist designs or a more traditional look, we offer a range of options to suit your tastes.
+</p>
+<ul className='list-styled-none text-start' style={{listStyle: "none"}}>
+  <li>Customized Cabinetry</li>
+  <li>High-End Appliances</li>
+  <li>Space-Saving Storage Solutions</li>
+  <li>Eco-Friendly Materials</li>
+  <li>Smart Kitchen Technology</li>
+</ul>
+<p className="text-start">
+  Let us help you design the kitchen of your dreams that blends form and function seamlessly.
+</p>
+  </div>
+  <div className="a1 col-md-6 col-12">
+<div style={{maxHeight: "400px", overflowY: "hidden", borderRadius: "10px"}} id="carouselExample3" className="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
+        <div className="carousel-inner">
+          {kitchen.map((image, index) => (
+            <div
+              key={index}
+              className={`carousel-item ${index === 0 ? 'active' : ''}`}
+            >
+              <img
+                src={image}
+                className="d-block w-100"
+                alt={`PVC Service ${index + 1}`}
+                style={{ height: "400px", objectFit: "cover" }}
+              />
+            </div>
+          ))}
+        </div>
+
+        <button
+          className="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExample3"
+          data-bs-slide="prev"
+        >
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Previous</span>
+        </button>
+
+        <button
+          className="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExample3"
+          data-bs-slide="next"
+        >
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Next</span>
+        </button>
+      </div></div>
+      </div>
+
+      <div className="a row mt-5 pt-5">
+      <div className="a1 col-md-6 col-12">
+      <h2 className="text-start text-black">Cozy Bedrooms</h2>
+<p className="text-start">
+  Your bedroom should be your sanctuary—a place to relax and unwind. Our bedroom designs are crafted with comfort and style in mind. 
+  From comfortable mattresses to luxurious bedding, we ensure every detail is considered for your perfect night's sleep. 
+  Create a retreat that reflects your style with our range of customizable furniture and decor options.
+</p>
+<ul className="text-start" style={{listStyle: "none"}}>
+  <li>Comfortable Bed Frames</li>
+  <li>Luxury Bedding and Mattresses</li>
+  <li>Stylish Storage Solutions</li>
+  <li>Personalized Lighting</li>
+  <li>Custom Closets and Wardrobes</li>
+</ul>
+<p className="text-start">
+  Turn your bedroom into a peaceful retreat that you’ll love spending time in. Our designs make your space cozy and inviting.
+</p>
+  </div>
+  <div className="a1 col-md-6 col-12">
+<div style={{maxHeight: "400px", overflowY: "hidden", borderRadius: "10px"}} id="carouselExample4" className="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
+        <div className="carousel-inner">
+          {bed.map((image, index) => (
+            <div
+              key={index}
+              className={`carousel-item ${index === 0 ? 'active' : ''}`}
+            >
+              <img
+                src={image}
+                className="d-block w-100"
+                alt={`PVC Service ${index + 1}`}
+                style={{ height: "400px", objectFit: "cover" }}
+              />
+            </div>
+          ))}
+        </div>
+
+        <button
+          className="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExample4"
+          data-bs-slide="prev"
+        >
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Previous</span>
+        </button>
+
+        <button
+          className="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExample4"
+          data-bs-slide="next"
+        >
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Next</span>
+        </button>
+      </div></div>
+      
+      </div>
+
+
+
+      <div className="a row mt-5 pt-5">
+  <div className="a1 col-md-6 col-12">
+  <h2 className='text-black text-start'>Stylish Living Rooms</h2>
+<p className="text-start">
+  Your living room is the heart of your home—a place for family gatherings, relaxing, and entertaining guests. Our living room designs focus on 
+  comfort and elegance, offering you a blend of luxury and practicality. From modern sofas to multi-functional furniture, we cater to every style.
+</p>
+<ul className="text-start" style={{listStyle: "none"}}>
+  <li>Comfortable Sofas and Seating</li>
+  <li>Modern Coffee Tables and Side Tables</li>
+  <li>Entertainment and Media Units</li>
+  <li>Decorative Accessories</li>
+  <li>Innovative Storage Solutions</li>
+</ul>
+<p className="text-start">
+  With our living room designs, you can create a space that is both inviting and functional. Whether you're hosting a party or enjoying a quiet evening, 
+  your living room will be the perfect backdrop for every occasion.
+</p>
+  </div>
+  <div className="a1 col-md-6 col-12">
+<div style={{maxHeight: "400px", overflowY: "hidden", borderRadius: "10px"}} id="carouselExample5" className="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
+        <div className="carousel-inner">
+          {liv.map((image, index) => (
+            <div
+              key={index}
+              className={`carousel-item ${index === 0 ? 'active' : ''}`}
+            >
+              <img
+                src={image}
+                className="d-block w-100"
+                alt={`PVC Service ${index + 1}`}
+                style={{ height: "400px", objectFit: "cover" }}
+              />
+            </div>
+          ))}
+        </div>
+
+        <button
+          className="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExample5"
+          data-bs-slide="prev"
+        >
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Previous</span>
+        </button>
+
+        <button
+          className="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExample5"
+          data-bs-slide="next"
+        >
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Next</span>
+        </button>
+      </div></div>
+      </div></div>
+        </>
+        </>
+      )}
+
+
+
+    
 
       
     </div>
+
+
+
+
+
+
+
+
+
+
+    {/* <div className="video embed container-fluid"> */}
+    <h2 className="text-center text-black mt-5">Our Makings</h2>
+      <div className="d-flex p-5 flex-wrap flex-lg-row flex-md-row flx-sm-row flex-column">
+        <div className="col-md-6 col-sm-12 col-12 d-flex justify-content-center align-items-center text-center text-center">
+        <video width="100%" height="500" autoPlay loop muted>
+  <source src={v1} type="video/mp4" />
+</video>
+        </div>
+        <div className="col-md-6 mt-5 mt-sm-0 mt-md-0 mt-lg-0 col-sm-12 col-12 d-flex justify-content-center align-items-center text-center">
+        <video width="100%" height="500" autoPlay loop muted>
+  <source src={v2} type="video/mp4" />
+</video>
+        </div>
+      </div>
+    {/* </div> */}
+
+    
+
+
+
+
     <div className="foot">
         <footer style={{ background: "#1e4451" }} class="foot">
           <div
@@ -349,6 +1048,33 @@ export default function Gallery() {
           </div>
         </footer>
       </div>
+
+
+
+      <style jsx>{`
+  /* Adding smooth transition to carousel */
+.carousel-item {
+  transition: transform 0.5s ease-in-out !important; /* Add this line */
+}
+
+/* Smooth out the inner transition */
+.carousel-inner {
+  transition: transform 0.5s ease-in-out !important;
+}
+
+  .carousel-item img {
+    object-fit: cover;
+    max-height: 500px;
+  }
+  .footer-logo-img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+  }
+    .carousel-inner {
+  transition: transform 0.5s ease-in-out;
+}
+`}</style>
     </>
   );
 }

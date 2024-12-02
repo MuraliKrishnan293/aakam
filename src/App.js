@@ -49,7 +49,7 @@ function App() {
         </BrowserRouter>
         
         {/* <ReactWhatsapp number="9884624057" message="Hello World!!!" /> */}
-        <a href={`https://wa.me/918056491710?text=Hello%20`} target="_blank" rel="noopener noreferrer">
+        <a href={`https://wa.me/918056491710?text=Hello`} target="_blank" rel="noopener noreferrer">
             <div className="whatsapp-button">
               <FaWhatsapp className="whatsapp-icon" />
             </div>
