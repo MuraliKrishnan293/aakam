@@ -126,9 +126,9 @@ const AdminPanel = () => {
         </Row>
       </Container>
         </Tab>
-        <Tab eventKey="Reviews" title="Reviews">
+        {/* <Tab eventKey="Reviews" title="Reviews">
           <Reviews />
-        </Tab>
+        </Tab> */}
       </Tabs>
         
     )}
