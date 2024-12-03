@@ -14,15 +14,23 @@ import { FaWhatsapp } from 'react-icons/fa';
 import Admin from './Components/Admin';
 import AdminPanel from './Components/AdminPanel';
 import Kit from "./Components/Kit";
+import { Popup } from "./Components/Popup";
 
 function App() {
   const [load, setLoad] = useState(true);
+  const [isPopupVisible, setIsPopupVisible] = useState(false);
 
   useEffect(() => {
     AOS.init();
     setTimeout(() => {
       setLoad(false);
     }, 3000);
+
+    const popupTimer = setTimeout(() => {
+      setIsPopupVisible(true);
+    }, 10000);
+
+    return () => clearTimeout(popupTimer);
   }, []);
 
   return (
@@ -53,7 +61,12 @@ function App() {
               <FaWhatsapp className="whatsapp-icon" />
             </div>
           </a>
-        {/* <Land /> */}
+        
+        {/* Popup */}
+        <Popup
+            isVisible={isPopupVisible}
+            onClose={() => setIsPopupVisible(false)}
+          />
       </>
       )}
     </div>
