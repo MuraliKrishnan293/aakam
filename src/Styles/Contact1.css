@@ -1,0 +1,10 @@
+.popup-content-custom {
+    background-image: url('../Images/portrait2.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  label{
+    font-weight: 1000;
+  }
