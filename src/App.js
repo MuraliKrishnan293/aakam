@@ -26,12 +26,19 @@ function App() {
       setLoad(false);
     }, 3000);
 
-    const popupTimer = setTimeout(() => {
-      setIsPopupVisible(true);
-    }, 10000);
+    const popupShown = sessionStorage.getItem('popupShown');
+    
+    if (!popupShown) {
+      const popupTimer = setTimeout(() => {
+        setIsPopupVisible(true);
+        sessionStorage.setItem('popupShown', 'true'); // Mark the popup as shown
+      }, 10000);
 
     return () => clearTimeout(popupTimer);
+    }
   }, []);
+
+  const popupShown = sessionStorage.getItem('popupShown');
 
   return (
     <div className="App">
@@ -63,10 +70,10 @@ function App() {
           </a>
         
         {/* Popup */}
-        <Popup
+        { !popupShown && (<Popup
             isVisible={isPopupVisible}
             onClose={() => setIsPopupVisible(false)}
-          />
+          />)}
       </>
       )}
     </div>
