@@ -17,7 +17,7 @@
     transition: color 0.3s ease;
   }
   
-  .nav-link::after {
+  /* .nav-link::after {
     content: '';
     position: absolute;
     left: 0;
@@ -28,12 +28,12 @@
     transform: scaleX(0);
     transition: transform 0.3s ease;
     transform-origin: center;
-  }
+  } */
   
   .nav-link:hover {
-    color: #ffdd94;
+    /* color: #ffdd94; */
   }
   
   .nav-link:hover::after {
-    transform: scaleX(1);
+    /* transform: scaleX(1); */
   }

@@ -16,11 +16,10 @@ import AdminPanel from './Components/AdminPanel';
 import Kit from "./Components/Kit";
 
 function App() {
-  const [load, setLoad] = useState(false);
+  const [load, setLoad] = useState(true);
 
   useEffect(() => {
     AOS.init();
-    setLoad(true);
     setTimeout(() => {
       setLoad(false);
     }, 3000);

@@ -60,6 +60,24 @@ import b55 from '../Images/Bedroom/WhatsApp Image 2024-11-23 at 9.31.26 PM.jpeg'
 import v1 from '../OfficeImages/WhatsApp Video 2024-12-02 at 9.17.05 PM (1).mp4';
 import v2 from '../OfficeImages/WhatsApp Video 2024-12-02 at 9.17.05 PM.mp4';
 
+
+
+//OfficeFinalChanged Images
+import o11 from '../OfficeImages/off1.jpg';
+import o22 from '../OfficeImages/off2.jpeg';
+import o33 from '../OfficeImages/off3.jpg';
+import o44 from '../OfficeImages/off4.jpg';
+import o55 from '../OfficeImages/off5.jpg';
+
+
+
+//LivingRoomFinalChanged Images
+import l11 from '../LivingRoom/liv1.jpg';
+import l22 from '../LivingRoom/liv2.JPG';
+import l33 from '../LivingRoom/liv3.jpg';
+import l44 from '../LivingRoom/liv4.jpg';
+import l55 from '../Images/LivingRoom/WhatsApp Image 2024-11-23 at 9.32.59 PM.jpeg';
+
 export default function Gallery1() {
 
 
@@ -80,6 +98,10 @@ export default function Gallery1() {
 
   const bed = [b11,b22,b33,b44,b55];
   const liv = [l1,l2,l3,l4,l5];
+
+  const office1 = [o11,o22,o33,o44,o55];
+
+  const livingroom = [l11,l22,l33,l44,l55];
   
 
 
@@ -389,7 +411,7 @@ export default function Gallery1() {
   className="a1 col-md-6 col-12">
 <div style={{maxHeight: "400px", overflowY: "hidden", borderRadius: "10px"}} id="carouselExample2" className="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
         <div className="carousel-inner">
-          {office.map((image, index) => (
+          {office1.map((image, index) => (
             <div
               key={index}
               className={`carousel-item ${index === 0 ? 'active' : ''}`}
@@ -628,7 +650,8 @@ export default function Gallery1() {
   className="a1 col-md-6 col-12">
 <div style={{maxHeight: "400px", overflowY: "hidden", borderRadius: "10px"}} id="carouselExample5" className="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
         <div className="carousel-inner">
-          {liv.map((image, index) => (
+          {livingroom
+          .map((image, index) => (
             <div
               key={index}
               className={`carousel-item ${index === 0 ? 'active' : ''}`}
@@ -786,7 +809,7 @@ export default function Gallery1() {
   className="a1 col-md-6 col-12">
 <div style={{maxHeight: "400px", overflowY: "hidden", borderRadius: "10px"}} id="carouselExample2" className="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
         <div className="carousel-inner">
-          {office.map((image, index) => (
+          {office1.map((image, index) => (
             <div
               key={index}
               className={`carousel-item ${index === 0 ? 'active' : ''}`}
@@ -1003,7 +1026,7 @@ export default function Gallery1() {
   className="a1 col-md-6 col-12">
 <div style={{maxHeight: "400px", overflowY: "hidden", borderRadius: "10px"}} id="carouselExample5" className="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
         <div className="carousel-inner">
-          {liv.map((image, index) => (
+          {livingroom.map((image, index) => (
             <div
               key={index}
               className={`carousel-item ${index === 0 ? 'active' : ''}`}
