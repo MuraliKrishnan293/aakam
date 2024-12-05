@@ -39,7 +39,7 @@ function App() {
     }
   }, []);
 
-  const nav = useNavigate();
+  // const nav = useNavigate();
 
   useEffect(() => {
     AOS.init();
