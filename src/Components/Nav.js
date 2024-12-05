@@ -136,6 +136,7 @@ const MyNavbar = () => {
 
   const handleLogout = () => {
     localStorage.removeItem("token");
+    localStorage.clear();
     navigate("/admin");
   };
 
