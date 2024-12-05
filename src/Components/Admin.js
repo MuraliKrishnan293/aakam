@@ -36,8 +36,10 @@ const Admin = () => {
     nav("/admin-panel");
     toast.success("Login Success");
     if(req.status===200){
+      const expiryTime = Date.now() + 24 * 60 * 60 * 1000;
       localStorage.setItem("email", email);
       localStorage.setItem("token", req.data.authToken);
+      localStorage.setItem("tokenExpiry", expiryTime);
     }
   }
     catch(e){
@@ -50,9 +52,15 @@ const Admin = () => {
   const auth = localStorage.getItem("token");
 
   if(auth){
-    nav("/admin-panel");
-    toast.success("Already Logged In");
-    return;
+    const tokenExpiry = localStorage.getItem("tokenExpiry");
+    if (tokenExpiry && Date.now() > parseInt(tokenExpiry, 10)) {
+      localStorage.clear();
+      toast.error("Session expired. Please log in again.", toastOptions);
+    } else {
+      nav("/admin-panel");
+      toast.success("Already Logged In", toastOptions);
+      return;
+    }
   }
 
   return (<>

@@ -98,7 +98,7 @@ import "./App.css";
 import Nav from "./Components/Nav";
 import { useEffect, useState } from "react";
 import Land from "./Components/Land";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
 import About from "./Components/About";
 import { ContactUs } from "./Components/Contact";
 import Gallery from "./Components/Gallery";
@@ -114,6 +114,27 @@ import { Popup } from "./Components/Popup";
 function App() {
   const [load, setLoad] = useState(true);
   const [isPopupVisible, setIsPopupVisible] = useState(false);
+
+  useEffect(() => {
+    const tokenExpiry = localStorage.getItem("tokenExpiry");
+    if (tokenExpiry) {
+      const remainingTime = parseInt(tokenExpiry, 10) - Date.now();
+
+      if (remainingTime > 0) {
+        setTimeout(() => {
+          localStorage.clear();
+          alert("Session expired. Please log in again.");
+          nav('/admin');
+        }, remainingTime);
+      } else {
+        localStorage.clear();
+        alert("Session expired. Please log in again.");
+        nav('/admin');
+      }
+    }
+  }, []);
+
+  const nav = useNavigate();
 
   useEffect(() => {
     AOS.init();
