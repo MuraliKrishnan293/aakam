@@ -33,14 +33,15 @@ const Admin = () => {
     });
     setLoading(false);
     console.log(req.data);
-    nav("/admin-panel");
-    toast.success("Login Success");
+    
     if(req.status===200){
       const expiryTime = Date.now() + 24 * 60 * 60 * 1000;
       localStorage.setItem("email", email);
       localStorage.setItem("token", req.data.authToken);
       localStorage.setItem("tokenExpiry", expiryTime);
     }
+    nav("/admin-panel");
+    toast.success("Login Success");
   }
     catch(e){
       toast.error("Login failed", toastOptions);
