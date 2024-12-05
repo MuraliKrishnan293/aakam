@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../Styles/Admin.css';
 import axios, { HttpStatusCode } from 'axios';
 import { useNavigate } from 'react-router-dom';
@@ -10,7 +10,7 @@ const Admin = () => {
   const [password, setPass] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const nav = useNavigate();
+  const navigate = useNavigate();
 
 
 
@@ -40,7 +40,7 @@ const Admin = () => {
       localStorage.setItem("token", req.data.authToken);
       localStorage.setItem("tokenExpiry", expiryTime);
     }
-    nav("/admin-panel");
+    navigate("/admin-panel");
     toast.success("Login Success");
   }
     catch(e){
@@ -52,17 +52,19 @@ const Admin = () => {
 
   const auth = localStorage.getItem("token");
 
-  if(auth){
-    const tokenExpiry = localStorage.getItem("tokenExpiry");
-    if (tokenExpiry && Date.now() > parseInt(tokenExpiry, 10)) {
-      localStorage.clear();
-      toast.error("Session expired. Please log in again.", toastOptions);
-    } else {
-      nav("/admin-panel");
-      toast.success("Already Logged In", toastOptions);
-      return;
+  useEffect(() => {
+    const auth = localStorage.getItem("token");
+
+    if (auth) {
+      const tokenExpiry = localStorage.getItem("tokenExpiry");
+      if (tokenExpiry && Date.now() > parseInt(tokenExpiry, 10)) {
+        localStorage.clear();
+        toast.error("Session expired. Please log in again.", toastOptions);
+      } else {
+        navigate("/admin-panel"); // Redirect if already logged in and session is valid
+      }
     }
-  }
+  }, [navigate]);
 
   return (<>
     {!auth && (<div className="login-container">
