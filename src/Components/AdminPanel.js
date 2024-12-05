@@ -6,6 +6,7 @@ import moment from 'moment';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import Reviews from './Reviews';
+import { useNavigate, useNavigation } from 'react-router-dom';
 
 
 const AdminPanel = () => {
@@ -14,6 +15,7 @@ const AdminPanel = () => {
     const [appointments, setAppointments] = useState([]);
   const [loading, setLoading] = useState(true);
   const [reviews, setReviews] = useState([]);
+  const nav = useNavigate();
 
   useEffect(() => {
     // if (auth) {
@@ -63,6 +65,7 @@ const AdminPanel = () => {
 
     if (!auth) {
         return <h1 style={{ marginTop: "200px", textAlign: 'center', color: 'red' }}>Unauthorized</h1>;
+        nav("/admin");
       }
   return (
     <>
